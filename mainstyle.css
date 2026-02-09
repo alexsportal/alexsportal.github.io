@@ -80,7 +80,7 @@ z-index:5;
 
 #navbar{
 width:auto;
-
+max-width: 788px;
 
 height:200px;
 display:flex;
