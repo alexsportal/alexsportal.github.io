@@ -177,8 +177,8 @@ border-top-right-radius: 20px ;
 width:80%;
 height:120%;
 display: block;
-border-left: groove white 25px;
-border-right: groove white 25px;
+border-left: groove #BEB397 25px;
+border-right: groove #BEB397 25px;
 
 background: linear-gradient(180deg, rgba(42, 32, 79, 0.138) 10.1%, rgba(138, 100, 155, 0.414) 37.83%, rgba(180, 183, 200, 0.36) 65.02%);
 backdrop-filter: blur(2px);
