@@ -1,5 +1,5 @@
 body{
-background-color:rgb(0, 0, 0);
+background-color:#26122D;
 display:block;
 margin:0;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -61,7 +61,7 @@ height: auto;
 width: auto;
 
 margin: auto;
-border-radius: 20px;
+border-radius: 10px;
 }
 
 
@@ -109,12 +109,12 @@ transition: 1s;
     min-width:140px;
     left:0;
     right:0;
-    height:100px;
+    height:150px;
     top:30px;
     margin: auto;
     z-index:8;
     transition: 1s;
-border-radius:100%;
+    border-radius:100%;
 
 }
 
@@ -127,13 +127,14 @@ border-radius:100%;
     flex-direction: row;
     top:0;
     gap:10px;
+    transition:1s;
 }
 
 
 #navframe{ 
 
 z-index:10;
-top: -10px;
+top: -19px;
 left:0;
 right:0;
 margin-top:0px;
@@ -142,7 +143,7 @@ margin-right: auto;
 margin-bottom: auto;
 position: fixed;
 height: auto;
-width:98%;
+width:100%;
 pointer-events: none;
 transition: 1s;
 
@@ -151,8 +152,8 @@ transition: 1s;
 
 
 #footer{
-background-color:rgb(233, 233, 233);
-color:rgb(0, 0, 0);
+background-color:#5F4F63;
+color:rgb(255, 255, 255);
 position:relative;
 padding-top:25px;
 padding-bottom:30px;
@@ -170,17 +171,38 @@ justify-content: space-between;
 z-index:2;
 border-top-left-radius: 20px ;
 border-top-right-radius: 20px ;
+font-weight: 600;
 }
 
 
+#doubleborder{
+    width:80%;
+height:120%;
+display: block;
+border-left: solid #BEB397 38px;
+border-right: solid #BEB397 38px;
+background-color:rgba(0, 0, 0, 0);
+
+position:fixed;
+top:-50px;
+left:0;
+right:0;
+bottom:0;
+z-index:-1;
+margin-left:auto;
+margin-right:auto;
+border-top-left-radius: 600px;
+border-top-right-radius: 600px;
+pointer-events: none;
+}
 #ovalbg{
 width:80%;
 height:120%;
 display: block;
-border-left: groove #BEB397 25px;
-border-right: groove #BEB397 25px;
+border-right: groove #846c88 35px;
+border-left: ridge #846c88 35px;
 
-background: linear-gradient(180deg, rgba(42, 32, 79, 0.138) 10.1%, rgba(138, 100, 155, 0.414) 37.83%, rgba(180, 183, 200, 0.36) 65.02%);
+background: linear-gradient(152.44deg, rgba(73, 69, 102, 0) 11.96%, rgba(199, 195, 235, 0.63) 39.49%, rgba(15, 10, 53, 0) 55.2%, rgba(183, 179, 220, 0.575325) 61.68%, rgba(255, 255, 255, 0.118) 70.87%);
 backdrop-filter: blur(2px);
 position:fixed;
 top:-50px;
@@ -198,18 +220,14 @@ pointer-events: none;
 }
 
 @media screen and (max-width:1100px) {
-#ovalbg{
+#ovalbg,#doubleborder{
 box-sizing: border-box;
 width:100%;
   
 }
 }
 
-@media screen and (max-width:1100px) {
-#navframe{
-width:100%;
-}
-}
+
 
 @media screen and (max-width:743px) {
 #pagesection1, #pagesection2{
@@ -230,15 +248,24 @@ height:auto;
 margin-top:-20px;
 }
 
-@media screen and (max-width:743px){
+@media screen and (max-width:800px){
 .navbutton{
     width:80%;
    margin-top: 5px;
 }}
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:800px) {
 #banner{
-top:-10px;
+top:-20px;
   
 }
+}
+@font-face{
+    font-family:header;
+    src:url(fonts/CherrySwash-Bold.ttf);
+}
+
+h1{
+    font-family: header;
+    color:#5D4966;
 }
