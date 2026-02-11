@@ -4,7 +4,7 @@ display:block;
 margin:0;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 font-size: larger;
-background-image: url('images/sparkle_overlay.png');
+background-image: url('images/sparkle_overlay.jpg');
 background-size:contain;
 transition: 1s;
 
@@ -174,7 +174,7 @@ transition: 1s;
     transition:1s;
 }
 .openpage{
-    margin-top:25px;
+    margin-top:20px;
 }
 @media screen and (max-width:650px) {
 .openpage{
