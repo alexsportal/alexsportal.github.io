@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+
+#JMoverlay{
+    width:100%;
+    height:100%;
+    background-color:#3b354182;
+    display:block;
+    margin:0;
+    position:fixed;
+    overflow-y: scroll;
+    backdrop-filter: blur(5px);
+    z-index:15;
+}
+
+#overlaybox{
+    width:auto;
+    max-width:900px;
+    min-width:300px;
+    height:auto;
+    background-color:#4E435C;
+    border-radius:5px;
+    margin:auto;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    padding:25px;
+    background-image:url(images/sparkle_overlay2.png);
+    color:white;
+    margin-bottom:100px;
+    margin-top:50px;
+    transition: 1s;
+    z-index:16;
+}
+
+#exitbutton{
+    width:33px;
+    height:45px;
+    position:absolute;
+    padding:5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    flex:none;
+    margin-top:-65px;
+    display:block;
+    right:0px;
+    background: linear-gradient(180deg, #645775 0%, #4E435C 52.4%);
+    transition:.5s;
+}
+
+#exiticon{
+    width:22px;
+    height:26px;
+    position:relative;
+    margin:auto;
+    display:block;
+}
+
+#exitbutton:hover{
+    margin-top:-60px;
+    color:white;
+}
+
+h2{
+    font-family: header;
+    line-height: 0;
+}
+
+
+
+@font-face{
+    font-family:header;
+    src:url(fonts/Baloo2-ExtraBold.ttf);
+}
+
+@font-face{
+    font-family:header2;
+    src:url(fonts/Baloo2-Medium.ttf);
+}
+
+.imgcontainer{
+    width:100%;
+    height:100%;
+    background-color:#282628;
+    border-radius: 5px;
+    display:flex;
+    flex-direction:column;
+  
+}
+
+.lightboxdesc{
+    width:auto;
+    height:auto;
+    background-color:#40364D;
+    border-radius: 5px;
+    margin-top:15px;
+    padding:10px;
+    padding-left:15px;
+    text-align:center;
+}
+
+.slideshowimg{
+    width:auto;
+    height:400px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+    margin-bottom:10px;
+    flex:40%;
+    display:block;
+    position: relative;
+    left:0;
+    right:0;
+    opacity:100%;
+    transition: .5s;
+    background-color: white;;
+    box-shadow: 0px 4px 10px #1a171c ;
+    cursor: pointer;
+}
+
+.slideshowimg:hover{
+    opacity: 90%;
+    transform: scale(1.01,1.01);
+}
+
+#left, #right{
+    
+    height:auto;
+    width:60px;
+    margin: 0;
+    align-content: center;
+    transition:.5s;
+    cursor: pointer;
+}
+
+#left:hover, #right:hover{
+    background-color:rgba(240, 248, 255, 0.06);
+ 
+}
+#left:active, #right:active{
+    padding-right:1px;
+    padding-left:1px;
+}
+
+
+
+.next, .prev{
+    margin: auto;
+    display: block;
+    position: relative;
+    width:20%;
+    min-width: 15px;
+    max-width: 20px;
+  
+}
+
+#middle{
+    flex:40%;
+}
+
+#morepictures{
+    flex:100%;
+    width:100%;
+    height:80px;
+    background-color:#1a191a;
+    position:relative;
+    bottom:0px;
+    margin:0;
+    display:block;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.morepicscontainer{
+    margin:auto;
+    margin-top:10px;
+    display:flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width:50%;
+    height:60px;
+   
+    align-content: center;
+}
+
+
+table{
+    width:100%;
+    
+}
+.slidethumbnail{
+    margin:auto;
+    border:rgba(255, 255, 255, 0.338) solid 2px;
+    text-align:center;
+    border-radius:5px;   
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    opacity:70%;
+    transition: .5s;
+    background-color:white;
+}
+
+.active, .slidethumbnail:hover {
+  opacity: 1;
+  padding:1px;
+}
+
+.overlaycaption{
+    transition: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+@media screen and (max-width:660px){
+    #morepictures{
+        display:none;
+    }
+
+}
+@media screen and (max-width:660px){
+    .lightboxdesc{
+        font-size:.9rem;
+        padding:15px
+    }
+
+}
+@media screen and (max-width:660px){
+    #left{
+       border-bottom-left-radius: 5px;
+    }
+
+}
+@media screen and (max-width:660px){
+    #right{
+       border-bottom-right-radius: 5px;
+    }
+
+}
+
+
+
+
+</style>
+</head>
+
+
+
+
+
+
+
+<body>
+
+<div id="JMoverlay">
+
+
+
+<div id="overlaybox">
+
+<div onclick="closeBox()" id="exitbutton">
+<svg id="exiticon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="5" y1="-5" x2="32.4344" y2="-5" transform="matrix(-0.694548 -0.719446 -0.694548 0.719446 26 33.7236)" stroke="#B18098" stroke-width="10" stroke-linecap="round"/>
+<line x1="5" y1="-5" x2="32.4344" y2="-5" transform="matrix(-0.694548 0.719446 -0.694548 -0.719446 26 0)" stroke="#B18098" stroke-width="10" stroke-linecap="round"/>
+</svg>
+</div>
+
+
+<section >
+    <div class="imgcontainer">
+            <section style="display:flex;flex:100%;flex-direction:row;">
+            <div  onClick="plusSlides(-1)" id="left" style="border-top-left-radius: 5px;">
+                <svg class="prev" viewBox="0 0 30 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.00095 28.9894L24.6621 5M5.00095 29.0109L24.6621 53.0003" stroke="#F0ECF0" stroke-width="10" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div id="middle">
+                <div id="theslideshow">
+                    <a href="documents/JustMakeup_Project_Artboard1.jpg" rel=noopener target="_blank"><img class="slideshowimg" src="documents/JustMakeup_Project_Artboard1.jpg"/></a>
+                </div>
+               
+
+                <div id="theslideshow">
+                    <a href="documents/JustMakeup_Project_Artboard2.jpg" rel=noopener target="_blank"><img class="slideshowimg" src="documents/JustMakeup_Project_Artboard2.jpg"/></a>
+                </div>
+
+
+                <div id="theslideshow">
+                    <a href="documents/JustMakeup_Project_Artboard3.jpg" rel=noopener target="_blank"><img class="slideshowimg" src="documents/JustMakeup_Project_Artboard3.jpg"/></a>
+                </div> 
+
+                 <div id="theslideshow">
+                    <a href="documents/JustMakeup_Project_Artboard4.jpg" rel=noopener target="_blank"><img class="slideshowimg" src="documents/JustMakeup_Project_Artboard4.jpg"/></a>
+                </div> 
+                
+                <div id="theslideshow">
+                    <a href="documents/Artboard 1.png" rel=noopener target="_blank"><img class="slideshowimg" src="documents/Artboard 1.png"/></a>
+                </div>
+
+                <div id="theslideshow">
+                    <a href="documents/Artboard 1_2.png" rel=noopener target="_blank"><img class="slideshowimg" src="documents/Artboard 1_2.png"/></a>
+                </div>
+
+
+                <div id="theslideshow">
+                    <a href="documents/Artboard 24.png" rel=noopener target="_blank"><img class="slideshowimg" src="documents/Artboard 24.png"/></a>
+                </div>
+
+
+             
+
+
+
+
+            </div>
+            
+
+            <div onclick="plusSlides(1)" id="right" style="border-top-right-radius: 5px;">
+                <svg class="next" viewBox="0 0 30 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24.6612 28.9894L5 5M24.6612 29.0109L5 53.0003" stroke="#F0ECF0" stroke-width="10" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+        </section>
+
+        <section style="display:flex;flex:100%;flex-direction:row;">
+            <div id="morepictures">
+                <section class="morepicscontainer">
+                    <table>
+                        <td><img onclick="currentSlide(1)" class="slidethumbnail" alt="<h2>Title</h2> yay" src="documents/JustMakeup_Project_Artboard1.jpg"/></td>
+                        <td><img onclick="currentSlide(2)" class="slidethumbnail" alt="<h2>Title</h2> i think" src="documents/JustMakeup_Project_Artboard2.jpg"/></td>
+                        <td><img onclick="currentSlide(3)" class="slidethumbnail" alt="<h2>Title</h2> that i" src="documents/JustMakeup_Project_Artboard3.jpg" /></td>
+                        <td><img onclick="currentSlide(4)" class="slidethumbnail" alt="<h2>Title</h2> finally fuckin'" src="documents/JustMakeup_Project_Artboard4.jpg"/></td>
+                        <td><img onclick="currentSlide(5)" class="slidethumbnail" alt="<h2>Title</h2> fixed it" src="documents/Artboard 1.png"/></td>
+                        <td><img onclick="currentSlide(6)" class="slidethumbnail" alt="<h2>Title</h2> finally fuckin'" src="documents/Artboard 1_2.png"/></td>
+                        <td><img onclick="currentSlide(7)" class="slidethumbnail" alt="<h2>Title</h2> fixed it" src="documents/Artboard 24.png"/></td>
+
+                   </table>
+                </section>
+            </div>
+        </section>
+            
+        
+
+        
+    </div>
+</section>
+
+
+    <div class="lightboxdesc">
+        <p id="lightboxoverlaycaption">idk</p>
+    </div>
+</section>
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function openBox() {
+  document.getElementById("JMoverlay").style.display = "block";
+}
+
+function closeBox() {
+  document.getElementById("JMoverlay").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slideshowimg");
+  var thumbnail = document.getElementsByClassName("slidethumbnail");
+  var overlaycaption = document.getElementById("lightboxoverlaycaption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < thumbnail.length; i++) {
+      thumbnail[i].className = thumbnail[i].className.replace(" active", "");
+  }
+ slides[slideIndex-1].style.display = "block";
+  thumbnail[slideIndex-1].className += " active";
+  overlaycaption.innerHTML = thumbnail[slideIndex-1].alt;
+}
+
+</script>
+
+
+
+</body>
+</html>

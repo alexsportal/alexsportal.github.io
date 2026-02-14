@@ -3,10 +3,10 @@ background-color:#150A19;
 display:block;
 margin:0;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: larger;
+font-size: large;
 background-image: url('images/sparkle_overlay.jpg');
 background-size:contain;
-transition: .5s;
+transition: .3s;
 
 
 }
@@ -42,11 +42,7 @@ width:auto;
 height:auto;
 margin:auto;
 margin-top:20px;
-pointer-events: all;
---line-w-inner: 2px ;
---line-w-outer: 4px ;
-border: solid 3px transparent;
-box-shadow: 0 0 0 var(--line-w-outer)#514059 , inset 0 0 0 var(--line-w-inner) #514059; 
+border:solid 5px #514059;
 }
 
 @media screen and (max-width:1100px) {
@@ -207,12 +203,15 @@ width:70%;
 
 }
 }
+
 #footer{
-background-color:#847c68;
-color:#f0ecf0;
+background-color:#514059;
+color:#EDE4D0;
 position:relative;
 padding-top:25px;
 padding-bottom:30px;
+padding-left:20px;
+padding-right:20px;
 display: flex;
 margin-top: 25px;
 margin: auto;
@@ -227,7 +226,7 @@ justify-content: space-between;
 z-index:2;
 border-top-left-radius: 20px ;
 border-top-right-radius: 20px ;
-font-weight: 600;
+font-weight: 400;
 
 }
 
@@ -340,7 +339,24 @@ h1,h2,h3{
 .links{
     color:#362c61;
     font-family: header;
+    transition:.3s;
 }
+
+.links:hover{
+    cursor:pointer;
+    color:#141023;
+}
+
+.contactbutton{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contactbutton:hover{
+    color:white;
+
+}
+
 .imagedesc{
  margin:auto;
     margin-top:10px;
@@ -374,10 +390,6 @@ button{
     margin:auto;
     font-family:header2;
     font-size:large;
-   
-
-    
-   
 }
 iframe{
     border-radius: 10px;;
@@ -394,4 +406,378 @@ align-self: center;
 justify-self: center;
 display: block;
 }
+}
+
+#overlay{
+    width:100%;
+    height:100%;
+    display:block;
+    margin:0;
+    position:absolute;
+    overflow-y: scroll;
+    z-index:15;
+    background-color: #150A19;
+}
+
+@media screen and (max-width:900px){
+#twopictures{
+flex-direction: column;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*lightbox CSS*/
+
+
+
+
+
+
+
+
+
+
+
+#JMoverlay, #contactmeoverlay{
+    width:100%;
+    height:100%;
+    background-color:#131016af;
+    display:none;
+    margin:0;
+    position:fixed;
+    z-index:15;
+}
+
+#overlaybox{
+    width:auto;
+    max-width:900px;
+    min-width:300px;
+    height:auto;
+    background-color:#4E435C;
+    border-radius:5px;
+    margin:auto;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    padding:25px;
+    background-image:url(images/sparkle_overlay2.png);
+    color:white;
+    margin-bottom:100px;
+    margin-top:50px;
+    z-index:16;
+}
+
+#exitbutton{
+    width:33px;
+    height:45px;
+    position:absolute;
+    padding:5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    flex:none;
+    margin-top:-65px;
+    display:block;
+    right:0px;
+    background: linear-gradient(180deg, #6a5775 0%, #4E435C 52.4%);
+    transition:.3s;
+    cursor:pointer;
+}
+
+#exiticon{
+    width:22px;
+    height:26px;
+    position:relative;
+    margin:auto;
+    display:block;
+}
+
+#exitbutton:hover{
+    margin-top:-60px;
+    color:white;
+}
+
+h2{
+    font-family: header;
+    line-height: 0;
+}
+
+
+
+@font-face{
+    font-family:header;
+    src:url(fonts/Baloo2-ExtraBold.ttf);
+}
+
+@font-face{
+    font-family:header2;
+    src:url(fonts/Baloo2-Medium.ttf);
+}
+
+.imgcontainer{
+    width:100%;
+    height:100%;
+    background-color:#282628;
+    border-radius: 5px;
+    display:flex;
+    flex-direction:column;
+  
+}
+
+.lightboxdesc{
+    width:auto;
+    height:auto;
+    background-color:#40364D;
+    border-radius: 5px;
+    margin-top:15px;
+    padding:10px;
+    padding-left:15px;
+    text-align:center;
+    color:white;
+    -webkit-text-fill-color: white;
+}
+
+.slideshowimg{
+    width:auto;
+    height:400px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+    margin-bottom:10px;
+    flex:40%;
+    display:block;
+    position: relative;
+    left:0;
+    right:0;
+    opacity:100%;
+    transition: .3s;
+    background-color: white;;
+    box-shadow: 0px 4px 10px #1a171c ;
+    cursor: pointer;
+}
+
+.slideshowimg:hover{
+    opacity: 90%;
+    transform: scale(1.01,1.01);
+}
+
+#left, #right{
+    
+    height:auto;
+    width:60px;
+    margin: 0;
+    align-content: center;
+    transition:.3s;
+    cursor: pointer;
+}
+
+#left:hover, #right:hover{
+    background-color:rgba(240, 248, 255, 0.06);
+ 
+}
+#left:active, #right:active{
+    padding-right:1px;
+    padding-left:1px;
+}
+
+
+
+.next, .prev{
+    margin: auto;
+    display: block;
+    position: relative;
+    width:20%;
+    min-width: 15px;
+    max-width: 20px;
+  
+}
+
+#middle{
+    flex:40%;
+}
+
+
+#morepictures{
+    flex:100%;
+    width:100%;
+    height:80px;
+    background-color:#1a191a;
+    position:relative;
+    bottom:0px;
+    margin:0;
+    display:block;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.morepicscontainer{
+    margin:auto;
+    margin-top:10px;
+    display:flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width:50%;
+    height:60px;
+   
+    align-content: center;
+}
+
+
+table{
+    width:100%;
+    
+}
+.slidethumbnail{
+    margin:auto;
+    border:rgba(255, 255, 255, 0.338) solid 2px;
+    text-align:center;
+    border-radius:5px;   
+    cursor:pointer;
+    width:40px;
+    height:50px;
+    opacity:70%;
+    transition: .3s;
+    background-color:white;
+}
+
+.active, .slidethumbnail:hover {
+  opacity: 1;
+  padding:1px;
+}
+
+.overlaycaption{
+    transition: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+@media screen and (max-width:660px){
+    #morepictures{
+        display:none;
+    }
+
+}
+@media screen and (max-width:660px){
+    .lightboxdesc{
+        font-size:.9rem;
+        padding:15px
+    }
+
+}
+@media screen and (max-width:660px){
+    #left{
+       border-bottom-left-radius: 5px;
+    }
+
+}
+@media screen and (max-width:660px){
+    #right{
+       border-bottom-right-radius: 5px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* contact form css*/
+#contactmeoverlaybox{
+    width:80%;
+    max-width:600px;
+    min-width:400px;
+    height:auto;
+    background-color:#4E435C;
+    border-radius:5px;
+    margin:auto;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    padding:25px;
+    background-image:url(images/sparkle_overlay2.png);
+    color:white;
+    top:70px;   
+    transition:.3s ease;
+    
+}
+
+.send{
+   background-color:#453647;
+    width:100%;
+    height:40px;
+    color:#ffffffd4;
+    display:block;
+    border-radius:5px;
+    border: none;
+    padding:auto;
+    margin:auto;
+    font-family:header2;
+    font-size:large;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.send:hover{
+    color:white;
+    background-color: #78186b;
+}
+
+.send:active{
+  transform: scale(1.01,1.01);
+}
+
+h2{
+    font-family: header;
+    line-height: 0;
+     color:white;
+    -webkit-text-fill-color: white;
+}
+
+
+input, textarea{
+    height:30px;
+    border-radius:5px;
+    border:none;
+    padding:5px;
+    display:block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:medium;
+    padding-left:10px;
+}
+#name{
+    width:85%;
+
+}
+#email{
+    width:95%;
+  
+}
+#subject, #message{
+     width: 97%;
 }

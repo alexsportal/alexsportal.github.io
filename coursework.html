@@ -5,6 +5,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+</script>
 <style>
 
 
@@ -44,6 +46,191 @@ flex:100%;
 
    </script>
     <link rel="stylesheet" href="mainstyle.css"/>
+    <script src="justmakeupoverlay.js"></script>
+
+    <script>
+        function openForm() {
+        document.getElementById("contactmeoverlay").style.display = "block";
+        }
+
+        function closeForm() {
+        document.getElementById("contactmeoverlay").style.display = "none";
+        }
+
+    </script>
+
+<div id="contactmeoverlay">
+
+
+
+<div id="contactmeoverlaybox">
+
+<div onclick="closeForm()" id="exitbutton">
+<svg id="exiticon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="5" y1="-5" x2="32.4344" y2="-5" transform="matrix(-0.694548 -0.719446 -0.694548 0.719446 26 33.7236)" stroke="#4B0326" stroke-width="10" stroke-linecap="round"/>
+<line x1="5" y1="-5" x2="32.4344" y2="-5" transform="matrix(-0.694548 0.719446 -0.694548 -0.719446 26 0)" stroke="#4B0326" stroke-width="10" stroke-linecap="round"/>
+</svg>
+</div>
+
+
+<form action="/action_page.php">
+<section style="display:flex;flex-direction:row">
+<section style="flex-direction:column;flex:30%;width:100%;">
+    <label for="name"><h2>Name</h2></label>
+    <input type="text" id="name" placeholder="Please include your name" required/>
+</section>
+<section style="flex:50%;width:100%;">
+   <label for="email"><h2>Email</h2></label>
+    <input type="email" id="email" placeholder="Emailshmemail@123.com" required/>
+</section>
+</section>
+
+
+
+<section style="flex:100%;">
+    <br>
+    <label for="subject"><h2>Subject</h2></label>
+    <input type="text" id="subject" placeholder="Optional"/>
+    <br>
+    <label for="first"><h2>Message</h2></label>
+    <textarea style="height:200px; resize:vertical;" id="message" placeholder="Add a message." required></textarea>
+    <br>
+    <button class="send">Send</button>
+</section>
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div id="JMoverlay">
+
+
+
+<div id="overlaybox">
+
+<div onclick="closeBox()" id="exitbutton">
+<svg id="exiticon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="5" y1="-5" x2="32.4344" y2="-5" transform="matrix(-0.694548 -0.719446 -0.694548 0.719446 26 33.7236)" stroke="#4B0326" stroke-width="10" stroke-linecap="round"/>
+<line x1="5" y1="-5" x2="32.4344" y2="-5" transform="matrix(-0.694548 0.719446 -0.694548 -0.719446 26 0)" stroke="#4B0326" stroke-width="10" stroke-linecap="round"/>
+</svg>
+</div>
+
+
+<section >
+    <div class="imgcontainer">
+            <section style="display:flex;flex:100%;flex-direction:row;">
+            <div  onClick="plusSlides(-1)" id="left" style="border-top-left-radius: 5px;">
+                <svg class="prev" viewBox="0 0 30 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.00095 28.9894L24.6621 5M5.00095 29.0109L24.6621 53.0003" stroke="#F0ECF0" stroke-width="10" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div id="middle">
+                <div id="theslideshow">
+                    <a href="documents/JustMakeup_Project_Artboard1.jpg" rel=noopener target="_blank"><img class="slideshowimg" src="documents/JustMakeup_Project_Artboard1.jpg"/></a>
+                </div>
+               
+
+                <div id="theslideshow">
+                    <a href="documents/JustMakeup_Project_Artboard2.jpg" rel=noopener target="_blank"><img class="slideshowimg" src="documents/JustMakeup_Project_Artboard2.jpg"/></a>
+                </div>
+
+
+                <div id="theslideshow">
+                    <a href="documents/JustMakeup_Project_Artboard3.jpg" rel=noopener target="_blank"><img class="slideshowimg" src="documents/JustMakeup_Project_Artboard3.jpg"/></a>
+                </div> 
+
+                 <div id="theslideshow">
+                    <a href="documents/JustMakeup_Project_Artboard4.jpg" rel=noopener target="_blank"><img class="slideshowimg" src="documents/JustMakeup_Project_Artboard4.jpg"/></a>
+                </div> 
+                
+                <div id="theslideshow">
+                    <a href="documents/Artboard 1.png" rel=noopener target="_blank"><img class="slideshowimg" src="documents/Artboard 1.png"/></a>
+                </div>
+
+                <div id="theslideshow">
+                    <a href="documents/Artboard 1_2.png" rel=noopener target="_blank"><img class="slideshowimg" src="documents/Artboard 1_2.png"/></a>
+                </div>
+
+
+                <div id="theslideshow">
+                    <a href="documents/Artboard 24.png" rel=noopener target="_blank"><img class="slideshowimg" src="documents/Artboard 24.png"/></a>
+                </div>
+
+
+             
+
+
+
+
+            </div>
+            
+
+            <div onclick="plusSlides(1)" id="right" style="border-top-right-radius: 5px;">
+                <svg class="next" viewBox="0 0 30 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24.6612 28.9894L5 5M24.6612 29.0109L5 53.0003" stroke="#F0ECF0" stroke-width="10" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+        </section>
+
+        <section style="display:flex;flex:100%;flex-direction:row;">
+            <div id="morepictures">
+                <section class="morepicscontainer">
+                    <table>
+                        <td><img onclick="currentSlide(1)" class="slidethumbnail" alt="<h2>Title</h2> alt text 1" src="documents/JustMakeup_Project_Artboard1.jpg"/></td>
+                        <td><img onclick="currentSlide(2)" class="slidethumbnail" alt="<h2>Title</h2> alt text 2" src="documents/JustMakeup_Project_Artboard2.jpg"/></td>
+                        <td><img onclick="currentSlide(3)" class="slidethumbnail" alt="<h2>Title</h2> alt text 3" src="documents/JustMakeup_Project_Artboard3.jpg" /></td>
+                        <td><img onclick="currentSlide(4)" class="slidethumbnail" alt="<h2>Title</h2> alt text 4" src="documents/JustMakeup_Project_Artboard4.jpg"/></td>
+                        <td><img onclick="currentSlide(5)" class="slidethumbnail" alt="<h2>Title</h2> alt text 5" src="documents/Artboard 1.png"/></td>
+                        <td><img onclick="currentSlide(6)" class="slidethumbnail" alt="<h2>Title</h2> alt text 6" src="documents/Artboard 1_2.png"/></td>
+                        <td><img onclick="currentSlide(7)" class="slidethumbnail" alt="<h2>Title</h2> alt text 7" src="documents/Artboard 24.png"/></td>
+
+                   </table>
+                </section>
+            </div>
+        </section>
+            
+        
+
+        
+    </div>
+</section>
+
+
+    <div class="lightboxdesc">
+        <p id="lightboxoverlaycaption">idk</p>
+    </div>
+</section>
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
 <a href="index.html"><svg id="banner" width="436" height="156" viewBox="0 0 436 156" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_279_160)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M218.121 13.9645C218.122 13.9877 218.123 14.011 218.123 14.0344L218.122 14.0104L218.121 13.9645ZM33.5617 72.1498L33.5437 72.1497C33.6578 72.1495 33.7715 72.1499 33.8848 72.151C33.7774 72.1511 33.6697 72.1507 33.5617 72.1498Z" fill="#44324A"/>
@@ -319,7 +506,7 @@ flex:100%;
     <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('documents/milkywaybeanlogo.png');background-size: cover;"></div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('documents/milkywaybeanlogo.png');background-size: contain;background-position:center;background-repeat:no-repeat;background-color:#4a466a"></div>
             <p><b class="links">MilkywayBean</b> - 2026</p>
             </div>
 
@@ -346,8 +533,8 @@ flex:100%;
     
     <section class="gallery">
             
-           <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('documents/Artboard\ 1.png');background-size: cover;"></div>
+           <div onclick="openBox();currentSlide(5)">
+            <div id="painting1" class="gallerypiccontainer" style="background-image: url('documents/Artboard\ 1.png');background-size: contain;background-position:center;background-repeat: no-repeat;background-color:#b1acaf"></div>
             <p><b class="links">Just Makeup</b> - 2021</p>
             </div>
 
@@ -365,7 +552,7 @@ flex:100%;
            <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('documents/mixingcolors1.png');background-size: cover;"></div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('documents/mixingcolors1.png');background-size: contain;background-position: center;background-repeat: no-repeat;background-color:#e5d7f7"></div>
             <p><b class="links">Mixing Colors</b> - 2020</p>
             </div>
 
@@ -382,12 +569,12 @@ flex:100%;
 
 
 <footer id="footer">
-<section style="margin-left:20px"> Alexsandria (Alex) Manuel 2026</section>
-<section style="margin-right:20px"> Contact Me </section>
+<section style="margin-left:20px"> <i>Alexsandria (Alex) Manuel, 2026</i></section>
+<section class="contactbutton" onclick="openForm()" style="margin-right:20px">Contact Me</section>
 </footer>
 
 
-     <div id="ovalbg"></div>
+<div id="ovalbg"></div>
 
 
   
