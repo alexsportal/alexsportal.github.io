@@ -119,15 +119,17 @@ display: block;
 </div>
 
 
-<form action="/action_page.php">
+<form action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="bd48ad60-1199-4931-8293-8d4d32d0b51e">
+<input type="hidden" name="redirect" value="https://alexsportal.github.io/portfolio/sent.html">
 <section style="display:flex;flex-direction:row">
 <section style="flex-direction:column;flex:30%;width:100%;">
-    <label for="name"><h2>Name</h2></label>
-    <input type="text" id="name" placeholder="Please include your name" required/>
+    <label  for="name"><h2>Name</h2></label>
+    <input type="text" name="name" id="name" placeholder="Please include your name" required/>
 </section>
 <section style="flex:50%;width:100%;">
    <label for="email"><h2>Email</h2></label>
-    <input type="email" id="email" placeholder="Emailshmemail@123.com" required/>
+    <input type="email" name="email" id="email" placeholder="Emailshmemail@123.com" required/>
 </section>
 </section>
 
@@ -136,12 +138,12 @@ display: block;
 <section style="flex:100%;">
     <br>
     <label for="subject"><h2>Subject</h2></label>
-    <input type="text" id="subject" placeholder="Optional"/>
+    <input type="text" name="subject" id="subject" placeholder="Optional"/>
     <br>
     <label for="first"><h2>Message</h2></label>
-    <textarea style="height:200px; resize:vertical;" id="message" placeholder="Add a message." required></textarea>
+    <textarea name="message" style="height:200px; resize:vertical;" id="message" placeholder="Add a message." required></textarea>
     <br>
-    <button class="send">Send</button>
+    <button type="submit" class="send">Send</button>
 </section>
 
 
