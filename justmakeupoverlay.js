@@ -16,7 +16,8 @@ function plusSlides(n) {
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n); 
+  showSlides(slideIndex = n);
+  document.getElementById("JMoverlay").style.display = "block"; 
 }
 
 
