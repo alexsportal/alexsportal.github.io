@@ -366,11 +366,16 @@ h1,h2,h3{
 .contactbutton{
     cursor:pointer;
     transition:.3s;
+    width:100px;
+    height:25px;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .contactbutton:hover{
-    color:white;
-
+   color:#fbf7f0;
+    background-color:rgba(12, 9, 0, 0.142);
 }
 
 .imagedesc{
@@ -402,11 +407,17 @@ button{
     color:#ffffff;
     display:block;
     border-radius:5px;
-    border: solid rgba(255, 255, 255, 0.295) 2px;
+    border: none;
     padding:auto;
     margin:auto;
     font-family:header2;
     font-size:large;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    filter: saturate(170%);
 }
 
 iframe{
@@ -495,7 +506,7 @@ flex-direction: column;
     display:flex;
     flex-direction: column;
     padding:25px;
-    background-image:url(images/sparkle_overlay2.png);
+    background-image:url(images/sparkle_overlay3.png); 
     color:white;
     margin-bottom:100px;
     margin-top:50px;
@@ -765,10 +776,7 @@ table{
     cursor:pointer;
 }
 
-.send:hover{
-    color:white;
-    background-color: #78186b;
-}
+
 
 .send:active{
   transform: scale(1.01,1.01);

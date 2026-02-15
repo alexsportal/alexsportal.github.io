@@ -66,7 +66,8 @@
     
     text-align: center;
     align-content: center;
-    width:110px;
+    margin-top:10px;
+    width:100px;
     height:130px;
     line-height: 1;
     margin-left: auto;
@@ -74,16 +75,20 @@
     cursor:pointer;
     flex:20%;
 }
+
 @media screen and (max-width:680px) {
 .smgridcontent{
-flex-direction:row;
     width:100px;
     height:90px;
-  flex:100%;
-  margin-top: 5px;
-  margin-bottom: 25px;
+    flex:100%;
+ 
 }
 }
+
+@media screen and (max-width:680px) {
+.smgrid{
+    flex-direction:column;
+}}
 
 @media screen and (max-width:680px) {
 .homebottom{
@@ -418,27 +423,31 @@ height:auto;
     <container class="homebottom">
 
     <container class="smgrid">
+<a style="text-decoration: none;color:rgb(29, 29, 29);font-family:header2;" target="_blank" rel="noopener" href="https://www.linkedin.com/in/alexmanuel-am/">
 <div class="smgridcontent">
         <img class="smbuttons" src="images/Platform=linkedIn, Color=Negative.png"/>
   
         <h4>LinkedIn</h4>
-        <p style="line-height: 0;">alexmanuel-am</p>
+       
 </div>
+</a>
 
+<a style="text-decoration: none;color:rgb(29, 29, 29);font-family:header2;" target="_blank" rel="noopener" href="https://bsky.app/profile/milkywaybean.bsky.social">
 <div class="smgridcontent">
 <img class="smbuttons"src="images/Platform=Bluesky, Color=Negative.png"/>
   
         <h4>Bluesky</h4>
-        <p style="line-height: 0;">@milkywaybean</p>
+   
 </div>
+</a>
 
-<div onclick="location.href='C:\Users\amanu\OneDrive\Documents\portfolio\portfolio.html'" class="smgridcontent">
+<a style="text-decoration: none;color:rgb(29, 29, 29);font-family:header2;" target="_blank" rel="noopener" href="https://www.instagram.com/milkyway.bean/"><div class="smgridcontent">
        <img class="smbuttons"src="images/Platform=Instagram, Color=Negative.png"/>
   
         <h4>Instagram</h4>
-       <p style="line-height: 0;">@milkywaybean</p>
-</div>
 
+</div>
+</a>
 
 
     </container>    
@@ -455,7 +464,7 @@ height:auto;
     </div>
 
 <footer id="footer">
-<section style="margin-left:20px"> <i>Alexsandria (Alex) Manuel, 2026</i></section>
+<section style="margin-left:20px"> Alexsandria (Alex) Manuel, 2026</section>
 <section class="contactbutton" onclick="openForm()" style="margin-right:20px">Contact Me</section>
 </footer>
 
