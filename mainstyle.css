@@ -159,7 +159,9 @@ transition: 1s;
     filter:contrast(120%);
 }
 
-
+#banner:hover{
+      filter:contrast(140%);
+}
 
 #pagesection1, #pagesection2{
     min-width:150px;
@@ -267,6 +269,13 @@ font-weight: 400;
 
 }
 
+@media screen and (max-width:450px) {
+#footer{
+height:30px;
+padding-top:20px;
+
+}
+}
 
 
 
@@ -389,14 +398,14 @@ h1,h2,h3{
     color:#514059;
 }
 .links{
-    color:#362c61;
+    color:#514059;
     font-family: header;
     transition:.3s;
 }
 
 .links:hover{
     cursor:pointer;
-    color:#141023;
+    
 }
 
 .contactbutton{
@@ -407,6 +416,7 @@ h1,h2,h3{
     display: block;
     border-radius: 5px;
     text-align: center;
+    background-color:rgba(12, 9, 0, 0.064);
 }
 
 .contactbutton:hover{
@@ -760,6 +770,12 @@ td .slidethumbnail{
     }
 
 }
+@media screen and (max-width:940px){
+    .slideshowimg{
+       height: 200px;
+    }
+
+}
 @media screen and (max-width:660px){
     .lightboxdesc{
         font-size:.9rem;
@@ -799,7 +815,7 @@ td .slidethumbnail{
 #contactmeoverlaybox{
     width:80%;
     max-width:600px;
-    min-width:400px;
+    min-width:200px;
     height:auto;
     background-color:#4E435C;
     border-radius:5px;
