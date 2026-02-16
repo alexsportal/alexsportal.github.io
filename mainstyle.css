@@ -202,7 +202,7 @@ height: auto;
 width:100%;
 pointer-events: none;
 transition: 1s;
-top:-50px;
+top:-70px;
 
 }
 
@@ -342,8 +342,8 @@ filter:contrast(80%);
 }}
 @media screen and (max-width:600px){
 .navbutton{
-    width:70px;
-   margin-top: -60px;
+    width:80px;
+   margin-top: -50px;
 
 }}
 
