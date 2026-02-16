@@ -39,7 +39,7 @@ border-radius: 10px;
 margin-left: 15px;
 margin-right:20px;
 border:solid 3px #dfdae2;
-background-image: url(images/itsme.jpg);
+background-image: url(images/meandmom.jpeg);
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
@@ -47,19 +47,21 @@ background-position: center;
 }
 
 .aboutmepicture{
-flex:30%;
+flex:35%;
 align-self:center;
-
-
-
 }
-@media screen and (max-width:920px) {
+@media screen and (max-width:1100px) {
 .aboutmepicture{
 flex:90%;
   
 }
 }
-
+@media screen and (max-width:500px) {
+.aboutmepiccontainer{
+height:250px;
+  
+}
+}
 .gallery{
 flex-direction:row;
 flex:40%;
@@ -424,6 +426,7 @@ height:auto;
    
         <section class="aboutmepicture">
             <div class="aboutmepiccontainer"></div>
+             <p style="text-align: center;" class="caption">Me (left) and my mom (right).</p>
         </section>
 
         <section style="flex:60%;margin-top:-10px;">
@@ -628,7 +631,7 @@ Microsoft Word • Google Docs <br>
    
         <section class="gallery" id="twopictures" style="display:flex;">
             <div style="flex:40%;">
-            <div class="gallerypiccontainer" style="background-image:url('images/favoriteplace.jpg');background-position:center;"></div>
+            <div class="gallerypiccontainer" style="background-image:url('images/painting.png');background-position:center;"></div>
             <p class="imagedesc">I love art and whimsical styles, hence the design of my portfolio. I have another <a class="links" href="art.html">page</a> for my artwork!</p>
             </div>
 <br>
