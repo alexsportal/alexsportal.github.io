@@ -175,7 +175,9 @@ transition: 1s;
     justify-content: space-around;
 }
 
-
+.openpage{
+    pointer-events: none;
+}
 
 @media screen and (max-width:650px) {
 .openpage{
