@@ -150,17 +150,17 @@ transition: 1s;
     min-width:150px;
     left:0;
     right:0;
-    height:100px;
-    top:30px;
+    height:120px;
+    top:40px;
     margin: auto;
     z-index:8;
     transition: .3s;
     border-radius:100%;
-    filter:contrast(120%);
+ 
 }
 
 #banner:hover{
-      filter:contrast(140%);
+      filter:contrast(120%);
 }
 
 #pagesection1, #pagesection2{
@@ -176,9 +176,6 @@ transition: 1s;
 }
 
 
-.openpage{
-   filter:contrast(170%);
-}
 
 @media screen and (max-width:650px) {
 .openpage{
