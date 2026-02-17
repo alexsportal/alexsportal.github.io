@@ -108,7 +108,7 @@ border-radius: 10px;
 
 #navcontainer{
 width:auto;
-min-width:304px;
+
 height:283px;
 display:block;
 top:0;
@@ -122,7 +122,7 @@ z-index:5;
 
 #navbar{
 width:auto;
-max-width: 788px;
+
 
 height:200px;
 display:flex;
