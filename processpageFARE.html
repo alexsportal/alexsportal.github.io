@@ -59,9 +59,19 @@ margin: auto;
 justify-self: center;
 display: block;
 transition:.3s;
+box-shadow: 0px 5px 6px #55025523;
 }
+.piccontainermobile{
+height: auto;
+width:100%;
+border-radius: 10px;
+margin: auto;
+justify-self: center;
+display: block;
+transition:.3s;
 
-.piccontainer:hover{
+}
+.piccontainer:hover, .piccontainermobile:hover{
     cursor:pointer;
     transform:scale(1.01,1.01);
 }
@@ -455,8 +465,8 @@ Users who prefer to dine alone can view recommendations on the discover page. Re
         
         <section class="picture">
           <a target="_blank" rel="noopener" href="https://www.figma.com/proto/39fP4bPbPFaSXHwT1YN5qf/Capstone?node-id=69%3A1744&scaling=scale-down&page-id=0%3A1&starting-point-node-id=69%3A1744">
-           <img style="max-width:170px; width:60%;" src="images/faremobile.png" class="piccontainer"/></a>
-             <p style="text-align:center; width:80%; margin-bottom:10px;margin-top:-5px;margin: auto;" class="caption">Tap device to open prototype in a new tab.</p>
+           <img style="max-width:170px; width:60%;" src="images/faremobile.png" class="piccontainermobile"/></a>
+             <p style="text-align:center; width:80%; margin-bottom:10px;margin-top:-5px;margin: auto;" class="caption">Select device to open prototype in a new tab.</p>
         </section>
        
         <section style="flex:100%; ">
