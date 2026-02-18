@@ -10,6 +10,7 @@ transition: .3s;
 background-attachment: fixed;
 overflow: auto;
 scroll-snap-type: y mandatory;
+
 }
 
 .contentframe{
@@ -31,7 +32,7 @@ max-width:788px;
 pointer-events: all;
 overflow: auto;
 transition:.3s;
-
+scroll-snap-align: top;
 }
 
 
@@ -49,7 +50,8 @@ width:auto;
 height:auto;
 margin:auto;
 margin-top:20px;
-transition:.3s;scroll-snap-align: top;
+transition:.3s;
+
 }
 
 @media screen and (max-width:1100px) {
@@ -158,8 +160,8 @@ transition: 1s;
       filter:contrast(120%);
 }
 
-#pagesection1, #pagesection2{
-    min-width:150px;
+#pagesection1{
+
     width:auto;
     margin: auto;
     display:flex;
