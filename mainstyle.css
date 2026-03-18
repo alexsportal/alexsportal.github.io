@@ -10,7 +10,6 @@ transition: .3s;
 background-attachment: fixed;
 overflow: auto;
 scroll-snap-type: y mandatory;
-
 }
 
 .contentframe{
@@ -40,7 +39,7 @@ scroll-snap-align: top;
     --line-w-inner: 2px ;
 	--line-w-outer: 4px ;
 	border: solid 3px transparent;
-	box-shadow: 0 0 0 var(--line-w-outer)#514059 , inset 0 0 0 var(--line-w-inner) #514059; 
+	box-shadow: 0 0 0 var(--line-w-outer) #654574, inset 0 0 0 var(--line-w-inner) #583d65;
 display: flex;
 flex-direction: row;
 align-items: flex-start;
@@ -287,7 +286,8 @@ display: block;
 border-right: solid #846c88 15px;
 border-left: solid #846c88 15px;
 border-image: url("vectors/mirrorborder.svg") 30 / 25px;
-background: linear-gradient(152.44deg, rgba(73, 69, 102, 0.071) 11.96%, rgba(206, 202, 238, 0.279) 39.49%, rgba(15, 10, 53, 0) 55.2%, rgba(183, 179, 220, 0.405) 61.68%, rgba(255, 255, 255, 0.118) 70.87%);
+background:linear-gradient(152.44deg, rgb(57 53 87 / 89%) 11.96%, rgb(111 109 132 / 87%) 33.49%, 44.2%, rgb(84 81 114 / 92%) 61.68%, rgb(54 44 66 / 91%) 100%);
+
 position:fixed;
 top:-50px;
 left:0;
@@ -411,7 +411,7 @@ top:-170px;
 
 h1,h2,h3{
     font-family: header;
-    color:#514059;
+    color:#5f476b;
 }
 .links{
     color:#514059;
