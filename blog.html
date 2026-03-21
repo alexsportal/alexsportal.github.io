@@ -4,7 +4,12 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script> 
+$(function(){
+  $("#post1").load("blogposts/buildingfashiongame.html"); 
+});
+</script>
 <style>
 
 
@@ -436,100 +441,8 @@ a{
 
 </header>
 
-
-
-
 <!--POST 1-->
-<div id="post1" class="contentframe">
-
-<container class="contentcard">
-
-<section style="flex:100%;">
-<p class="dates">March 21, 2026</p><p class="tag"><b>Work in Progress</b></p>
-
-<h1 class="blogtitles">Building a Fashion Game</h1>
-
-</section>
-
-        <section style="flex:60%;margin-top:-10px ">
-         
-            <p>
-        I’ll try to keep this as short as I can. Dolli is an ultra-girly and nostalgic artistic outlet. This is an idea I started back in 2025. I initially started this to revive my Figma skills...but I quickly realized I wanted this to be an actual game. I’ve had a lot of free time since February this year, so I started to build a simple webpage demo.  
-             </p>
-            <p>
-        I did this first because: 
-            <ol>
-            <li> I’m not familiar with Godot yet. </li>
-            <li> I want to see how potential gameplayers would enjoy something like this.</li>
-            </ol>   
-            </p>
-            <p>
-        The demo just one part of the game; the avatar creation (aka the beauty parlor).
-            </p>
-        </section> 
-        
-        <section class="picture">
-            <a rel="noopener" target="_blank" href="documents\DolliProcess\Dolli_Overview.pdf"><img style="max-width:200px;" src="documents\DolliProcess\overview_image.png" class="piccontainer"/></a>
-           <p style="text-align:center; width:100%;" class="caption">Click to see concept overview.</p>
-        </section>
-
-         <section style="flex:100%;">
-            <h4>How I Started.</h4>
-            <p>
-        I started on paper by sketching the doll’s shape and the layout of the game. The sketches were imported into Krita, and I just started drawing a bunch of different hairstyles, eye shapes, clothes, skin tones, buttons, etc. 
-            </p>
-        </section> 
-
-        <section class="imageresize" style="flex:100%;display: flex;flex-wrap: wrap;flex-direction: row;justify-content: center;">
-            <img class="drawingsgif" src="documents/DolliProcess/buttondrawings.gif"/>
-            <img class="drawingsgif" src="documents/DolliProcess/clothesdrawing.gif"/>
-        </section>
-<!--
-        <section class="scrollimages" style="flex:100%;display: flex;flex-wrap:nowrap;justify-content: space-around;">
-            <img class="sketches" src="documents/DolliProcess/Sketches/sketch1.jpg"/>
-            <img class="sketches" src="documents/DolliProcess/Sketches/sketch2.jpg"/>
-        </section>
--->
-
-         <section style="flex:100%;">
-            <p>
-      Three of each facial feature/clothing options were enough for me to start building the prototype in Figma. I used the sketch idea for the initial layout which was supposed to be built for desktop platforms.  
-            </p>
-        </section> 
-
-        <section style="flex:100%;">
-            <h4>Platform Switch</h4>
-            <p>
-      But don’t I want my game to be available offline? I especially wanted my game to be available to kids who may not have their own computer to use. My assumption was that 
-      <a href="https://www.census.gov/library/stories/2023/04/tablets-more-common-in-households-with-children.html" rel="noopener" target="_blank">most kids use their tablets or their phone </a> to play games. Because of this, instead of building a desktop web game prototype, I pivoted to designing a mobile layout for iOS and Android. The game would also be available cross-platform, mobile and web.   
-            </p>
-        </section> 
-
-      <section class="imageresize" style="flex:100%;display:flex;flex-wrap: wrap;justify-content:center">
-        <img style="width:250px;margin:20px;" src="documents/DolliProcess/desktopwireframe.jpg"/>
-        <img style="width:250px;margin:20px;" src="documents/DolliProcess/desktopprototype.png"/>
-      </section> 
-
-        <section style="align-items: center;display: flex;flex-direction: column;">
-        <p>Her old design: </p>
-        <img src="documents/DolliProcess/dolliprototypev1.gif"/>
-        </section>
-        <section style="align-items: center;display: flex;flex-direction: column;">
-        <p>Her current design: </p>
-        <img src="documents/DolliProcess/dolliprototypev2.gif"/>
-        </section>
-        
-        <section style="flex:100%;">
-            <p>
-      The initial idea was to create a simple fashion game, but I know it’ll grow into so much more. I need to figure out how to make Dolli <i>fun</i>. I want anyone who plays my game to want to come back to the app. My rough ideas for this are noted, but I don’t want to fly too close to the sun just yet. For now, I need to get started by learning the basics of Godot. 
-            </p>
-        </section> 
-
-    </container>
-
-  
-   
-</div>
+<div id="post1" class="contentframe"></div>
 
 
 
