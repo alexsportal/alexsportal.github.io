@@ -37,17 +37,14 @@ flex:100%;
 
 .piccontainer {
 height: auto;
-
 width:100%;
-
-border-radius: 20px;
+border-radius: 10px;
 margin: auto;
 justify-self: center;
 display: block;
 }
 
 .picture{
-
 margin:auto;
 left:0;
 right:0;
@@ -79,35 +76,77 @@ max-width:600px;
 margin-top: -15px;
 font-family:header;
 }
+
 .dates{
 flex:10%;
 text-align:right;
-
-
 font-size:medium;
+margin-top:0;
 }
 
-.general{
-    color:blue;
-    font-family:header;
-}
-.art{
-    color:red;
-    font-family:header;
-}
-.ui{
-    color:green;
-    font-family:header;
+.tag{
+flex:10%;
+font-family:header;
+font-size:small;
+text-align:right;
+margin-bottom:30px;
+color:#927786 ;
+line-height: 0;;
 }
 
-.general, .art, .ui{
-width:30%;
+h4{
+    font-family:header;
+    color:#5d4966;
 }
 
 #blog{
     pointer-events: none;
 }
 
+a{text-decoration:none}
+
+.sketches{
+    width:240px;
+    margin:30px;
+    scroll-snap-align:center;
+}
+
+@media screen and (max-width:834px) {
+.scrollimages{
+    max-width: 280px;
+    height: 363px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: auto;
+    position: relative;
+    scroll-snap-type: x mandatory;
+}
+}
+
+@media screen and (max-width:848px) {
+.imageresize,.sketches{
+   transform: scale(.9,.9);
+}
+
+}
+
+
+.drawingsgif{
+    width:266px;
+    margin:10px;
+    display:flex;
+}
+
+img{
+    border-radius:10px;
+    box-shadow: 0px 5px 6px #4101411b;
+}
+
+a{
+    color:purple;
+}
 </style>
 </head>
 <body>
@@ -183,7 +222,8 @@ width:30%;
 
 </div>
 
-<a href="index.html"><svg id="banner" width="436" height="156" viewBox="0 0 436 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+<a href="index.html">
+<svg id="banner" width="436" height="156" viewBox="0 0 436 156" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_279_160)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M218.121 13.9645C218.122 13.9877 218.123 14.011 218.123 14.0344L218.122 14.0104L218.121 13.9645ZM33.5617 72.1498L33.5437 72.1497C33.6578 72.1495 33.7715 72.1499 33.8848 72.151C33.7774 72.1511 33.6697 72.1507 33.5617 72.1498Z" fill="#44324A"/>
 <g clip-path="url(#paint0_angular_279_160_clip_path)" data-figma-skip-parse="true"><g transform="matrix(0.202 0 0 0.062 218 72)"><foreignObject x="-1032.26" y="-1032.26" width="2064.52" height="2064.52"><div xmlns="http://www.w3.org/1999/xhtml" style="background:conic-gradient(from 90deg,rgba(125, 103, 129, 1) 0deg,rgba(171, 159, 130, 1) 65.7692deg,rgba(145, 146, 182, 1) 188.654deg,rgba(125, 103, 129, 1) 360deg);height:100%;width:100%;opacity:1"></div></foreignObject></g></g><path d="M138.197 105.555C152.57 104.883 185.976 107.068 191.22 109.59C204.598 113.449 217.684 126.493 217.867 129.294C218.148 131.553 217.017 133.078 214.526 133.796C209.282 135.309 203.321 128.008 195.881 124.719C151.348 105.032 103.092 117.566 77.6003 102.025C61.2933 92.0842 46.4459 65.2628 26.3258 78.3234C24.4372 79.5493 24.5414 81.2862 25.1605 82.3578C25.7431 83.3664 27.5251 84.1674 29.2391 83.8707C32.1524 83.3664 31.0955 79.024 32.1524 79.332C33.9004 81.8535 33.665 83.5486 33.3178 84.375C30.9871 89.9223 19.9165 88.4092 17.1117 84.3748C13.3284 78.9329 19.8412 74.1056 27.0167 72.7759C29.2961 72.3536 31.4459 72.1568 33.4799 72.1498C33.5012 72.1498 33.5225 72.1497 33.5437 72.1497C33.6578 72.1495 33.7715 72.1499 33.8848 72.151C49.8121 72.2939 58.5967 84.0984 67.1123 89.9221C89.5859 105.292 123.825 106.228 138.197 105.555Z" data-figma-gradient-fill="{&#34;type&#34;:&#34;GRADIENT_ANGULAR&#34;,&#34;stops&#34;:[{&#34;color&#34;:{&#34;r&#34;:0.67307692766189575,&#34;g&#34;:0.62707668542861938,&#34;b&#34;:0.50998514890670776,&#34;a&#34;:1.0},&#34;position&#34;:0.18269228935241699},{&#34;color&#34;:{&#34;r&#34;:0.57230752706527710,&#34;g&#34;:0.57469218969345093,&#34;b&#34;:0.71538454294204712,&#34;a&#34;:1.0},&#34;position&#34;:0.52403843402862549},{&#34;color&#34;:{&#34;r&#34;:0.49019607901573181,&#34;g&#34;:0.40392157435417175,&#34;b&#34;:0.50588238239288330,&#34;a&#34;:1.0},&#34;position&#34;:1.0}],&#34;stopsVar&#34;:[{&#34;color&#34;:{&#34;r&#34;:0.67307692766189575,&#34;g&#34;:0.62707668542861938,&#34;b&#34;:0.50998514890670776,&#34;a&#34;:1.0},&#34;position&#34;:0.18269228935241699},{&#34;color&#34;:{&#34;r&#34;:0.57230752706527710,&#34;g&#34;:0.57469218969345093,&#34;b&#34;:0.71538454294204712,&#34;a&#34;:1.0},&#34;position&#34;:0.52403843402862549},{&#34;color&#34;:{&#34;r&#34;:0.49019607901573181,&#34;g&#34;:0.40392157435417175,&#34;b&#34;:0.50588238239288330,&#34;a&#34;:1.0},&#34;position&#34;:1.0}],&#34;transform&#34;:{&#34;m00&#34;:404.0,&#34;m01&#34;:0.0,&#34;m02&#34;:16.0,&#34;m10&#34;:0.0,&#34;m11&#34;:124.0,&#34;m12&#34;:10.0},&#34;opacity&#34;:1.0,&#34;blendMode&#34;:&#34;NORMAL&#34;,&#34;visible&#34;:true}"/>
@@ -243,7 +283,6 @@ width:30%;
 </radialGradient>
 </defs>
 </svg>
-
 </a>
 
 
@@ -363,7 +402,7 @@ width:30%;
 
         </div></a>
     
-        <a href="wip.html"><div id="page"  class="openpage">
+        <a href="blog.html"><div id="page"  class="openpage">
 
    
 <svg width="146" height="275" viewBox="0 0 146 275" class="navbutton" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -395,25 +434,117 @@ width:30%;
 
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </header>
 
 
 
 
+<!--POST 1-->
+<div id="post1" class="contentframe">
+
+<container class="contentcard">
+
+<section style="flex:100%;">
+<p class="dates">March 21, 2026</p><p class="tag"><b>Work in Progress</b></p>
+
+<h1 class="blogtitles">Building a Fashion Game</h1>
+
+</section>
+
+        <section style="flex:60%;margin-top:-10px ">
+         
+            <p>
+        I’ll try to keep this as short as I can. Dolli is an ultra-girly and nostalgic artistic outlet. This is an idea I started back in 2025. I initially started this to revive my Figma skills...but I quickly realized I wanted this to be an actual game. I’ve had a lot of free time since February this year, so I started to build a simple webpage demo.  
+             </p>
+            <p>
+        I did this first because: 
+            <ol>
+            <li> I’m not familiar with Godot yet. </li>
+            <li> I want to see how potential gameplayers would enjoy something like this.</li>
+            </ol>   
+            </p>
+            <p>
+        The demo just one part of the game; the avatar creation (aka the beauty parlor).
+            </p>
+        </section> 
+        
+        <section class="picture">
+            <a rel="noopener" target="_blank" href="documents\DolliProcess\Dolli_Overview.pdf"><img style="max-width:200px;" src="documents\DolliProcess\overview_image.png" class="piccontainer"/></a>
+           <p style="text-align:center; width:100%;" class="caption">Click to see concept overview.</p>
+        </section>
+
+         <section style="flex:100%;">
+            <h4>How I Started.</h4>
+            <p>
+        I started on paper by sketching the doll’s shape and the layout of the game. The sketches were imported into Krita, and I just started drawing a bunch of different hairstyles, eye shapes, clothes, skin tones, buttons, etc. 
+            </p>
+        </section> 
+
+        <section class="imageresize" style="flex:100%;display: flex;flex-wrap: wrap;flex-direction: row;justify-content: center;">
+            <img class="drawingsgif" src="documents/DolliProcess/buttondrawings.gif"/>
+            <img class="drawingsgif" src="documents/DolliProcess/clothesdrawing.gif"/>
+        </section>
+<!--
+        <section class="scrollimages" style="flex:100%;display: flex;flex-wrap:nowrap;justify-content: space-around;">
+            <img class="sketches" src="documents/DolliProcess/Sketches/sketch1.jpg"/>
+            <img class="sketches" src="documents/DolliProcess/Sketches/sketch2.jpg"/>
+        </section>
+-->
+
+         <section style="flex:100%;">
+            <p>
+      Three of each facial feature/clothing options were enough for me to start building the prototype in Figma. I used the sketch idea for the initial layout which was supposed to be built for desktop platforms.  
+            </p>
+        </section> 
+
+        <section style="flex:100%;">
+            <h4>Platform Switch</h4>
+            <p>
+      But don’t I want my game to be available offline? I especially wanted my game to be available to kids who may not have their own computer to use. My assumption was that 
+      <a href="https://www.census.gov/library/stories/2023/04/tablets-more-common-in-households-with-children.html" rel="noopener" target="_blank">most kids use their tablets or their phone </a> to play games. Because of this, instead of building a desktop web game prototype, I pivoted to designing a mobile layout for iOS and Android. The game would also be available cross-platform, mobile and web.   
+            </p>
+        </section> 
+
+      <section class="imageresize" style="flex:100%;display:flex;flex-wrap: wrap;justify-content:center">
+        <img style="width:250px;margin:20px;" src="documents/DolliProcess/desktopwireframe.jpg"/>
+        <img style="width:250px;margin:20px;" src="documents/DolliProcess/desktopprototype.png"/>
+      </section> 
+
+        <section style="align-items: center;display: flex;flex-direction: column;">
+        <p>Her old design: </p>
+        <img src="documents/DolliProcess/dolliprototypev1.gif"/>
+        </section>
+        <section style="align-items: center;display: flex;flex-direction: column;">
+        <p>Her current design: </p>
+        <img src="documents/DolliProcess/dolliprototypev2.gif"/>
+        </section>
+        
+        <section style="flex:100%;">
+            <p>
+      The initial idea was to create a simple fashion game, but I know it’ll grow into so much more. I need to figure out how to make Dolli <i>fun</i>. I want anyone who plays my game to want to come back to the app. My rough ideas for this are noted, but I don’t want to fly too close to the sun just yet. For now, I need to get started by learning the basics of Godot. 
+            </p>
+        </section> 
+
+    </container>
+
+  
+   
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+TEMPLATE 1
 
 
 <div class="contentframe">
@@ -426,10 +557,6 @@ width:30%;
 <p class="art"><b>Blog Type</b></p>
 
 </section>
-
- 
-   
-       
 
         <section style="flex:60%;margin-top:-10px ">
          
@@ -451,9 +578,15 @@ width:30%;
     </container>
 
   
-
    
 </div>
+
+
+
+
+TEMPLATE 2
+
+
 
 <div class="contentframe">
 
@@ -495,6 +628,11 @@ width:30%;
     </container>
  
 </div>
+
+
+
+TEMPLATE 3
+
 
 
 <div class="contentframe">
@@ -552,7 +690,7 @@ width:30%;
 </container>
 
 </div>
-
+-->
 
 <footer id="footer">
 <section style="margin-left:20px"> Alexsandria Manuel, 2026</section>
