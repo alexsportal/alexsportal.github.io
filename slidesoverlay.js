@@ -1,11 +1,19 @@
 
-
-function closeBox() {
-  document.getElementById("JMoverlay").style.display = "none";
+function openBox() {
+    const overlay = document.getElementById("JMoverlay");
+    overlay.style.display = "block";
+    overlay.classList.remove("closing");
+    document.body.classList.add("noscroll");
 }
 
-function openBox() {
-  document.getElementById("JMoverlay").style.display = "block";
+function closeBox() {
+    const overlay = document.getElementById("JMoverlay");
+    overlay.classList.add("closing");
+    setTimeout(() => {
+        overlay.style.display = "none";
+        overlay.classList.remove("closing");
+        document.body.classList.remove("noscroll");
+    }, 200);
 }
 
 var slideIndex = 1;

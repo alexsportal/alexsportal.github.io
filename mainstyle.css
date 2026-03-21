@@ -8,9 +8,12 @@ background-image: url('images/sparkle_overlay.jpg');
 background-size:contain;
 transition: .3s;
 background-attachment: fixed;
-overflow: auto;
-scroll-snap-type: y mandatory;
 }
+body.noscroll {
+    overflow: hidden;
+}
+
+
 
 .contentframe{
 padding: 60px;
@@ -23,7 +26,6 @@ left:0;
 right:0;
 pointer-events: none;
 margin: auto;
-content-visibility:auto;
 position: relative;
 width: auto;
 min-width:200px;
@@ -35,11 +37,12 @@ scroll-snap-align: top;
 }
 
 
+
 .contentcard{
-    --line-w-inner: 2px ;
-	--line-w-outer: 4px ;
-	border: solid 3px transparent;
-	box-shadow: 0 0 0 var(--line-w-outer) #654574, inset 0 0 0 var(--line-w-inner) #583d65;
+--line-w-inner: 2px ;
+--line-w-outer: 4px ;
+border: solid 3px transparent;
+box-shadow: 0 0 0 var(--line-w-outer) #654574, inset 0 0 0 var(--line-w-inner) #583d65;
 display: flex;
 flex-direction: row;
 align-items: flex-start;
@@ -309,15 +312,6 @@ width:87%;
 }
 }
 
-
-
-
-
-
-
-
-
-
 .navbutton{
 width: auto;
 height:auto;
@@ -529,7 +523,26 @@ flex-direction: column;
 }
 
 
-
+.linkbutton{
+    padding:5px;
+    text-align: center;
+    cursor:pointer;
+    color:#42294c;
+    background-color:#d9d7d9;
+    transition: .3s ease;
+    border-radius:5px;
+    text-decoration: none;
+    font-family: header;
+    font-size:medium;
+}
+.linkbutton:hover{
+    padding:5px;
+      color: #5e1069;
+    text-align: center;
+    cursor:pointer;
+    background-color:#b2a1b975;
+   
+}
 
 
 
@@ -566,9 +579,9 @@ flex-direction: column;
 
 #overlaybox{
     width:auto;
-    max-width:900px;
+    max-width:1000px;
     min-width:300px;
-    height:auto;
+    height:900px;
     background-color:#4E435C;
     border-radius:5px;
     margin:auto;
@@ -576,7 +589,6 @@ flex-direction: column;
     display:flex;
     flex-direction: column;
     padding:25px;
-    background-image:url(images/sparkle_overlay3.png); 
     color:white;
     margin-bottom:100px;
     margin-top:45px;
@@ -658,7 +670,8 @@ h2{
 .slideshowimg{
     width:auto;
     max-width: 99%;
-    height:400px;
+    height:auto;
+    max-height: 700px;
     margin-left:auto;
     margin-right:auto;
     margin-top:10px;
@@ -814,6 +827,26 @@ td .slidethumbnail{
 }
 
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.95); }
+}
+
+#overlaybox {
+    animation: fadeIn 0.2s ease forwards;
+}
+
+#overlaybox.closing {
+    animation: fadeOut 0.2s ease forwards;
+}
+
+
+
 
 
 
@@ -841,12 +874,13 @@ td .slidethumbnail{
     display:flex;
     flex-direction: column;
     padding:25px;
-    background-image:url(images/sparkle_overlay2.png);
     color:white;
     top:70px;   
     transition:.3s ease;
     
 }
+
+
 
 .send{
    background-color:#453647;
@@ -901,6 +935,24 @@ input, textarea{
 }
 
 
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.95); }
+}
+
+#contactmeoverlaybox {
+    animation: fadeIn 0.2s ease forwards;
+}
+
+#contactmeoverlaybox.closing {
+    animation: fadeOut 0.2s ease forwards;
+}
 
 
 

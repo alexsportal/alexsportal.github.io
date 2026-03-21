@@ -151,15 +151,22 @@ input, textarea{
 
 <body>
      <script>
-        function openForm() {
-        document.getElementById("contactmeoverlay").style.display = "block";
-        }
+function openForm() {
+    const overlay = document.getElementById("contactmeoverlay");
+    overlay.style.display = "block";
+    overlay.classList.remove("closing");
+    document.body.classList.add("noscroll");
+}
 
-        function closeForm() {
-        document.getElementById("contactmeoverlay").style.display = "none";
-        }
-
-
+function closeForm() {
+    const overlay = document.getElementById("contactmeoverlay");
+    overlay.classList.add("closing");
+    setTimeout(() => {
+        overlay.style.display = "none";
+        overlay.classList.remove("closing");
+        document.body.classList.remove("noscroll");
+    }, 200);
+}
     </script>
 
 <div id="contactmeoverlay">
