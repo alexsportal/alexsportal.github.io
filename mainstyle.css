@@ -342,21 +342,20 @@ filter:contrast(80%);
 
 @media screen and (max-width:800px){
 .navbutton{
-    width:100px;
+   width:100px;
    margin-top: 5px;
 
 }}
 @media screen and (max-width:600px){
 .navbutton{
-    width:80px;
+   width:80px;
    margin-top: -50px;
 
 }}
 @media screen and (max-width:400px) {
 .navbutton{
-width:60px;
-margin-top:-110px;
-
+    width: 69px;
+    margin-top: -87px;
 }}
   
 @media screen and (max-width:400px){
