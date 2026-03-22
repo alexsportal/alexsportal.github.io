@@ -16,7 +16,7 @@ body.noscroll {
 
 
 .contentframe{
-padding: 60px;
+padding: 45px;
 padding-bottom:25px;
 padding-top: 0px;
 display: flex;
@@ -33,7 +33,6 @@ max-width:788px;
 pointer-events: all;
 overflow: auto;
 transition:.3s;
-scroll-snap-align: top;
 }
 
 
@@ -59,6 +58,12 @@ transition:.3s;
 @media screen and (max-width:1100px) {
 .contentcard{
 width:80%;
+  
+}
+}
+@media screen and (max-width:500px) {
+.contentcard{
+width:90%;
   
 }
 }
@@ -307,11 +312,26 @@ backdrop-filter: blur(.4px);
 @media screen and (max-width:1100px) {
 #ovalbg{
 box-sizing: border-box;
-width:87%;
+width:83%;
   
 }
 }
 
+@media screen and (max-width:950px) {
+#ovalbg{
+box-sizing: border-box;
+width:88%;
+  
+}
+}
+
+@media screen and (max-width:550px) {
+#ovalbg{
+box-sizing: border-box;
+width:95%;
+  
+}
+}
 .navbutton{
 width: auto;
 height:auto;
@@ -403,10 +423,27 @@ top:-170px;
     src:url(fonts/Baloo2-Medium.ttf);
 }
 
-h1,h2,h3{
+h1{
     font-family: header;
     color:#5f476b;
+    font-size:xx-large;
 }
+
+
+h2{
+    font-family: header;
+    color:#5f476b;
+    font-size:x-large;
+}
+
+
+h3{
+    font-family: header;
+    color:#5f476b;
+    font-size:larger;
+}
+
+
 .links{
     color:#514059;
     font-family: header;
@@ -800,12 +837,7 @@ td .slidethumbnail{
     }
 
 }
-@media screen and (max-width:940px){
-    .slideshowimg{
-       height: 200px;
-    }
 
-}
 @media screen and (max-width:660px){
     .lightboxdesc{
         font-size:.9rem;

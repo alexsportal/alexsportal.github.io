@@ -28,6 +28,10 @@ function currentSlide(n) {
   document.getElementById("JMoverlay").style.display = "block"; 
 }
 
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+    openBox();
+}
 
 function showSlides(n) {
   var i;
