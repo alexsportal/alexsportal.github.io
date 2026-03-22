@@ -92,20 +92,27 @@ flex:100%;
     <script src="slidesoverlay.js"></script>
 
     <script>
-        function openForm() {
-        document.getElementById("contactmeoverlay").style.display = "block";
-        }
+function openForm() {
+    const overlay = document.getElementById("contactmeoverlay");
+    overlay.style.display = "block";
+    overlay.classList.remove("closing");
+    document.body.classList.add("noscroll");
+}
 
-        function closeForm() {
-        document.getElementById("contactmeoverlay").style.display = "none";
-        }
+function closeForm() {
+    const overlay = document.getElementById("contactmeoverlay");
+    overlay.classList.add("closing");
+    setTimeout(() => {
+        overlay.style.display = "none";
+        overlay.classList.remove("closing");
+        document.body.classList.remove("noscroll");
+    }, 200);
+}
     </script>
 
-<div id="contactmeoverlay">
 
-
-
-<div id="contactmeoverlaybox">
+<div id="contactmeoverlay" onclick="closeForm()">
+    <div id="contactmeoverlaybox">
 
 <div onclick="closeForm()" id="exitbutton">
 <svg id="exiticon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -159,12 +166,9 @@ flex:100%;
 
 </div>
 
+<div id="JMoverlay" onclick="closeBox()">
+    <div id="overlaybox" onclick="event.stopPropagation()">
 
-<div id="JMoverlay">
-
-
-
-<div id="overlaybox">
 
 <div onclick="closeBox()" id="exitbutton">
 <svg id="exiticon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -600,7 +604,7 @@ flex:100%;
             <p ><b class="links">FARE -</b> Process Page</p>
             </div></a>
             <a class="linkbutton" target="_blank" rel="noopener" style="text-decoration: none;width:100%;" href="https://www.figma.com/proto/39fP4bPbPFaSXHwT1YN5qf/Capstone?node-id=69%3A1744&scaling=scale-down&page-id=0%3A1&starting-point-node-id=69%3A1744">
-               FARE: Prototype
+              🔗‍️ Prototype
             </a> 
         </section>
             
@@ -610,7 +614,7 @@ flex:100%;
             <p ><b class="links">IRIS -</b> Process Page</p>
             </div></a>
             <a class="linkbutton" target="_blank" rel="noopener" style="text-decoration: none;" href="https://www.figma.com/proto/IgDqSfB2xsT84JywAuQkbZ/IAD-4000-T4-Prototype?page-id=0%3A1&node-id=524%3A3536&viewport=241%2C48%2C0.51&scaling=scale-down&starting-point-node-id=524%3A3536">
-                IRIS: Prototype
+               🔗‍️ Prototype
             </a> 
         </section>
             
@@ -621,7 +625,7 @@ flex:100%;
           
             </div></a>
             <a class="linkbutton" target="_blank" rel="noopener" style="text-decoration: none;" href="https://www.figma.com/proto/Q05iqnsvS2esUbnDoDWx9V/8Tiv-Social-Media-App?node-id=3%3A5&starting-point-node-id=1%3A2">
-                8TIV: Prototype
+                🔗‍️ Prototype
             </a> 
 
              

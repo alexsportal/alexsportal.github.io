@@ -45,22 +45,28 @@ flex:100%;
   
     <link rel="stylesheet" href="mainstyle.css"/>
 
-      <script>
-        function openForm() {
-        document.getElementById("contactmeoverlay").style.display = "block";
-        }
+    <script>
+function openForm() {
+    const overlay = document.getElementById("contactmeoverlay");
+    overlay.style.display = "block";
+    overlay.classList.remove("closing");
+    document.body.classList.add("noscroll");
+}
 
-        function closeForm() {
-        document.getElementById("contactmeoverlay").style.display = "none";
-        }
+function closeForm() {
+    const overlay = document.getElementById("contactmeoverlay");
+    overlay.classList.add("closing");
+    setTimeout(() => {
+        overlay.style.display = "none";
+        overlay.classList.remove("closing");
+        document.body.classList.remove("noscroll");
+    }, 200);
+}
+    </script>
 
-        </script>
 
-    <div id="contactmeoverlay">
-
-
-
-<div id="contactmeoverlaybox">
+<div id="contactmeoverlay" onclick="closeForm()">
+    <div id="contactmeoverlaybox">
 
 <div onclick="closeForm()" id="exitbutton">
 <svg id="exiticon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,7 +119,6 @@ flex:100%;
 
 
 </div>
-
 <a href="index.html"><svg id="banner" width="436" height="156" viewBox="0 0 436 156" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_279_160)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M218.121 13.9645C218.122 13.9877 218.123 14.011 218.123 14.0344L218.122 14.0104L218.121 13.9645ZM33.5617 72.1498L33.5437 72.1497C33.6578 72.1495 33.7715 72.1499 33.8848 72.151C33.7774 72.1511 33.6697 72.1507 33.5617 72.1498Z" fill="#44324A"/>

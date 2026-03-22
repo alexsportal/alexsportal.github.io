@@ -134,11 +134,28 @@ display: block;
     <div onclick="sectionSix()" class="pagenavbuttons">6</div>
 </div>
 
-<div id="contactmeoverlay">
+    <script>
+function openForm() {
+    const overlay = document.getElementById("contactmeoverlay");
+    overlay.style.display = "block";
+    overlay.classList.remove("closing");
+    document.body.classList.add("noscroll");
+}
+
+function closeForm() {
+    const overlay = document.getElementById("contactmeoverlay");
+    overlay.classList.add("closing");
+    setTimeout(() => {
+        overlay.style.display = "none";
+        overlay.classList.remove("closing");
+        document.body.classList.remove("noscroll");
+    }, 200);
+}
+    </script>
 
 
-
-<div id="contactmeoverlaybox">
+<div id="contactmeoverlay" onclick="closeForm()">
+    <div id="contactmeoverlaybox">
 
 <div onclick="closeForm()" id="exitbutton">
 <svg id="exiticon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
