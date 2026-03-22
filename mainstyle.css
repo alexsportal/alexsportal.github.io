@@ -250,7 +250,6 @@ position:relative;
 padding-top:25px;
 padding-bottom:30px;
 display: flex;
-margin-top: 25px;
 margin: auto;
 left:0;
 right:0;
@@ -378,8 +377,8 @@ width:38%;
 }
 @media screen and (max-width:550px) {
 #banner{
-top:-13px;
-width:35%;
+top: -21px;
+width: 42%;
 
 }
 }
