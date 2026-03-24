@@ -11,6 +11,22 @@
 
 
 
+.hoverimg{
+height: 170px;
+width: 170px;
+background-color: #555;
+border-radius: 10px;
+margin: auto;
+box-shadow: 0px 5px 6px #55025523;
+opacity:100%;
+background-size: cover;
+transition: .3s ease;
+}
+
+.hoverimg:hover,
+.hoverimg:active{
+    opacity:0%;
+}
 
 .gallerypiccontainer {
 height: 170px;
@@ -19,7 +35,9 @@ background-color: #555;
 border-radius: 10px;
 margin: auto;
 box-shadow: 0px 5px 6px #55025523;
+background-size: cover;
 }
+
 
 .gallery{
     flex-direction:row;
@@ -399,9 +417,11 @@ function closeForm() {
      <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/selfportrait1.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="selfportrait1" class="gallerypiccontainer" style="background-image: url('images/Paintings/selfportrait2.gif');background-size: cover;">
+                <div class="hoverimg" style="background-image:url('images/Paintings/selfportrait1.jpg')"></div>
+            </div>
+            <p><b class="links">Self Portrait</b></p>
+            <p style="font-size:small;margin-top:-15px;">2024</p>
             </div>
 
       </section>
@@ -409,9 +429,11 @@ function closeForm() {
       <section class="gallery">
             
            <div>
-            <div onclick="" id="painting2" class="gallerypiccontainer" style="background-image: url('images/Paintings/grandma1.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="grandma1" class="gallerypiccontainer" style="background-image: url('images/Paintings/grandma2.jpg');background-size: cover;">
+                <div class="hoverimg" style="background-image:url('images/Paintings/grandma1.jpg')"></div>
+            </div>
+            <p><b class="links">Grandma's Portrait</b></p>
+            <p style="font-size:small;margin-top:-15px;">2022</p>
             </div>
 
         </section>
@@ -419,9 +441,11 @@ function closeForm() {
            <section class="gallery">
             
            <div>
-            <div onclick="" id="painting3" class="gallerypiccontainer" style="background-image: url('images/Paintings/portrait1.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="portrait1" class="gallerypiccontainer" style="background-image: url('images/Paintings/portrait2.jpg');background-size: cover;">
+                 <div class="hoverimg" style="background-image:url('images/Paintings/portrait1.jpg')"></div>
+            </div>
+            <p><b class="links">Baby Portrait</b></p>
+            <p style="font-size:small;margin-top:-15px;">2020</p>
             </div>
 
         </section>
@@ -449,26 +473,32 @@ function closeForm() {
         <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/mockup1.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="mockup1" class="gallerypiccontainer" style="background-image: url('images/Paintings/mockup1.2.gif');background-size: cover;">
+                 <div class="hoverimg" style="background-image:url('images/Paintings/mockup1.jpg')"></div>
+            </div>
+            <p><b class="links">Desk Mockup</b></p>
+            <p style="font-size:small;margin-top:-15px;">2025</p>
             </div>
 
         </section>
          <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/mockup2.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="mockup2" class="gallerypiccontainer" style="background-image: url('images/Paintings/mockup2.2.gif');background-size: cover;">
+                 <div class="hoverimg" style="background-image:url('images/Paintings/mockup2.jpg')"></div>
+            </div>
+            <p><b class="links">Table Mockup</b></p>
+            <p style="font-size:small;margin-top:-15px;">2025</p>
             </div>
 
         </section>
         <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/solareclipse1.PNG');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
+            <div onclick="" id="solareclipse1" class="gallerypiccontainer" style="background-image: url('images/Paintings/solareclipse2.gif');background-size: cover;">
+                 <div class="hoverimg" style="background-image:url('images/Paintings/solareclipse1.PNG')"></div>
+            </div>
+            <p><b class="links">Solar Eclipse</b></p>
             <p style="font-size:small;margin-top:-15px;">2026</p>
             </div>
 
@@ -476,8 +506,10 @@ function closeForm() {
             <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/concern1.PNG');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
+            <div onclick="" id="concern1" class="gallerypiccontainer" style="background-image: url('images/Paintings/concern2.gif');background-size: cover;">
+                 <div class="hoverimg" style="background-image:url('images/Paintings/concern1.PNG')"></div>
+            </div>
+            <p><b class="links">Concern</b></p>
             <p style="font-size:small;margin-top:-15px;">2026</p>
             </div>
 
@@ -485,8 +517,10 @@ function closeForm() {
          <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/untitled4.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
+            <div onclick="" id="untitled4" class="gallerypiccontainer" style="background-image: url('images/Paintings/untitled4.2.gif');background-size: cover;">
+                 <div class="hoverimg" style="background-image:url('images/Paintings/untitled4.jpg')"></div>
+            </div>
+            <p><b class="links">Untitled</b></p>
             <p style="font-size:small;margin-top:-15px;">2026</p>
             </div>
 
@@ -494,8 +528,10 @@ function closeForm() {
         <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/milkywaybean.PNG');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
+            <div onclick="" id="milkywaybean" class="gallerypiccontainer" style="background-image: url('images/Paintings/mwblogo2.gif');background-size: cover;">
+                 <div class="hoverimg" style="background-image:url('images/Paintings/milkywaybean.PNG')"></div>
+            </div>
+            <p><b class="links">Milkyway Bean</b></p>
             <p style="font-size:small;margin-top:-15px;">2026</p>
             </div>
 
@@ -515,15 +551,15 @@ function closeForm() {
 
     <container class="contentcard">
   
-    <h1 style="text-align:center; width:auto; max-width: 720px ;flex:100%">Paintings</h1>
+    <h1 style="text-align:center; width:auto; max-width: 720px ;flex:100%">Traditional Paintings</h1>
     <p style="margin-top:-10px;text-align: center;flex:100%;">*This page is still under construction 3/24/26*</p>
    
      <section class="gallery">
             
            <div>
-            <div onclick="" id="painting4" class="gallerypiccontainer" style="background-image: url('images/Paintings/dusk1.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="dusk1" class="gallerypiccontainer" style="background-image: url('images/Paintings/dusk1.jpg');background-size: cover;"></div>
+            <p><b class="links">Dusk</b></p>
+            <p style="font-size:small;margin-top:-15px;">2025</p>
             </div>
 
       </section>
@@ -531,9 +567,9 @@ function closeForm() {
       <section class="gallery">
             
            <div>
-            <div onclick="" id="painting5" class="gallerypiccontainer" style="background-image: url('images/Paintings/unconditional1.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="unconditional1" class="gallerypiccontainer" style="background-image: url('images/Paintings/unconditional1.jpg');background-size: cover;"></div>
+            <p><b class="links">Unconditional</b></p>
+            <p style="font-size:small;margin-top:-15px;">2024</p>
             </div>
 
         </section>
@@ -541,9 +577,9 @@ function closeForm() {
            <section class="gallery">
             
            <div>
-            <div onclick="" id="painting6" class="gallerypiccontainer" style="background-image: url('images/Paintings/cloudprincess1.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="cloudprincess1" class="gallerypiccontainer" style="background-image: url('images/Paintings/cloudprincess1.jpg');background-size: cover;"></div>
+            <p><b class="links">Cloud Princess</b></p>
+            <p style="font-size:small;margin-top:-15px;">2023</p>
             </div>
 
         </section>
@@ -552,9 +588,9 @@ function closeForm() {
       <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/thesunshines1.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="thesunshines1" class="gallerypiccontainer" style="background-image: url('images/Paintings/thesunshines1.jpg');background-size: cover;"></div>
+            <p><b class="links">The Sun Shines</b></p>
+            <p style="font-size:small;margin-top:-15px;">2023</p>
             </div>
 
       </section>
@@ -562,9 +598,9 @@ function closeForm() {
       <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/anhedonia1.JPG');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="anhedonia1" class="gallerypiccontainer" style="background-image: url('images/Paintings/anhedonia1.JPG');background-size: cover;"></div>
+            <p><b class="links">Anhedonia</b></p>
+            <p style="font-size:small;margin-top:-15px;">2022</p>
             </div>
 
         </section>
@@ -572,9 +608,9 @@ function closeForm() {
            <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/empty1.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="empty1" class="gallerypiccontainer" style="background-image: url('images/Paintings/empty1.jpg');background-size: cover;"></div>
+            <p><b class="links">Empty</b></p>
+            <p style="font-size:small;margin-top:-15px;">2022</p>
             </div>
 
         </section>
@@ -585,9 +621,9 @@ function closeForm() {
          <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/allseeing1.JPG');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="allseeing1" class="gallerypiccontainer" style="background-image: url('images/Paintings/allseeing1.JPG');background-size: cover;"></div>
+            <p><b class="links">All Seeing</b></p>
+            <p style="font-size:small;margin-top:-15px;">2022</p>
             </div>
 
         </section>
@@ -598,9 +634,9 @@ function closeForm() {
            <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/fae1.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="fae1" class="gallerypiccontainer" style="background-image: url('images/Paintings/fae1.jpg');background-size: cover;"></div>
+            <p><b class="links">Fae</b></p>
+            <p style="font-size:small;margin-top:-15px;">2022</p>
             </div>
 
         </section>
@@ -608,9 +644,9 @@ function closeForm() {
         <section class="gallery">
                 
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/lonefae1.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="lonefae1" class="gallerypiccontainer" style="background-image: url('images/Paintings/lonefae1.jpg');background-size: cover;"></div>
+            <p><b class="links">Lone Fae</b></p>
+            <p style="font-size:small;margin-top:-15px;">2022</p>
             </div>
 
         </section>
@@ -619,9 +655,9 @@ function closeForm() {
            <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/unicorn1.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="unicorn1" class="gallerypiccontainer" style="background-image: url('images/Paintings/unicorn1.jpg');background-size: cover;"></div>
+            <p><b class="links">Unicorn</b></p>
+            <p style="font-size:small;margin-top:-15px;">2022</p>
             </div>
 
         </section>
@@ -632,9 +668,9 @@ function closeForm() {
          <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/sandman1.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="sandman1" class="gallerypiccontainer" style="background-image: url('images/Paintings/sandman1.jpg');background-size: cover;"></div>
+            <p><b class="links">Sandman</b></p>
+            <p style="font-size:small;margin-top:-15px;">2021</p>
             </div>
 
         </section>
@@ -643,9 +679,9 @@ function closeForm() {
            <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/thehermit.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="thehermit" class="gallerypiccontainer" style="background-image: url('images/Paintings/thehermit.jpg');background-size: cover;"></div>
+            <p><b class="links">The Hermit</b></p>
+            <p style="font-size:small;margin-top:-15px;">2020</p>
             </div>
 
         </section>
@@ -653,54 +689,54 @@ function closeForm() {
         <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/selfreflection1.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="selfreflection1" class="gallerypiccontainer" style="background-image: url('images/Paintings/selfreflection1.jpg');background-size: cover;"></div>
+            <p><b class="links">Self Reflection</b></p>
+            <p style="font-size:small;margin-top:-15px;">2020</p>
             </div>
 
         </section>
          <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/trapped1.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="trapped1" class="gallerypiccontainer" style="background-image: url('images/Paintings/trapped1.jpg');background-size: cover;"></div>
+            <p><b class="links">Trapped</b></p>
+            <p style="font-size:small;margin-top:-15px;">2020</p>
             </div>
 
         </section>
         <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/perception.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="perception" class="gallerypiccontainer" style="background-image: url('images/Paintings/perception.jpg');background-size: cover;"></div>
+            <p><b class="links">Perception</b></p>
+            <p style="font-size:small;margin-top:-15px;">2020</p>
             </div>
 
         </section>
         <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/untitled1.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="untitled1" class="gallerypiccontainer" style="background-image: url('images/Paintings/untitled1.jpg');background-size: cover;"></div>
+            <p><b class="links">Untitled</b></p>
+            <p style="font-size:small;margin-top:-15px;">2022</p>
             </div>
 
         </section>
          <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/untitled2.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="untitled2" class="gallerypiccontainer" style="background-image: url('images/Paintings/untitled2.jpg');background-size: cover;"></div>
+            <p><b class="links">Untitled</b></p>
+            <p style="font-size:small;margin-top:-15px;">2022</p>
             </div>
 
         </section>
         <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/untitled3.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="untitled3" class="gallerypiccontainer" style="background-image: url('images/Paintings/untitled3.jpg');background-size: cover;"></div>
+            <p><b class="links">Untitled</b></p>
+            <p style="font-size:small;margin-top:-15px;">2020</p>
             </div>
 
         </section>
@@ -708,18 +744,18 @@ function closeForm() {
          <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/mermaidsdrown.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="marmaidsdrown" class="gallerypiccontainer" style="background-image: url('images/Paintings/mermaidsdrown.jpg');background-size: cover;"></div>
+            <p><b class="links">Mermaids Drown</b></p>
+            <p style="font-size:small;margin-top:-15px;">2020</p>
             </div>
 
         </section>
         <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/favoriteplace.jpg');background-size: cover;"></div>
-            <p><b class="links">Title</b></p>
-            <p style="font-size:small;margin-top:-15px;">2026</p>
+            <div onclick="" id="favoriteplace" class="gallerypiccontainer" style="background-image: url('images/Paintings/favoriteplace.jpg');background-size: cover;"></div>
+            <p><b class="links">Favorite Place</b></p>
+            <p style="font-size:small;margin-top:-15px;">2020</p>
             </div>
 
         </section>

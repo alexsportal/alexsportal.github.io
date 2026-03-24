@@ -4,9 +4,8 @@ display:block;
 margin:0;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 font-size: 1rem;
-background-image: url('images/sparkle_overlay.jpg');
+background-image: url('images/sparkleoverlay.jpg');
 background-size:contain;
-transition: .3s;
 background-attachment: fixed;
 }
 body.noscroll {
