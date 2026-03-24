@@ -9,23 +9,30 @@
 
 
 
+
+
+
 .gallerypiccontainer {
 height: 170px;
-max-width: 180px;
-width: auto;
+width: 170px;
 background-color: #555;
-border-radius: 20px;
+border-radius: 10px;
 margin: auto;
-
-
+box-shadow: 0px 5px 6px #55025523;
 }
 
 .gallery{
     flex-direction:row;
     flex:30%;
-
     text-align: center;
- 
+    transition:.3s;
+    scroll-snap-align:center;
+}
+
+.gallery:hover{
+    cursor:pointer;
+    transform:scale(1.01,1.01);
+    margin-top:-5px;
 }
 @media screen and (max-width:724px) {
 .gallery{
@@ -33,6 +40,38 @@ flex:100%;
 
 }
 
+}
+
+.galleryslides{
+    display: flex;
+    position: relative;
+    gap: 20px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    flex-wrap: wrap;
+    flex: 100%;
+    scroll-snap-type: x mandatory;
+}
+
+
+@media screen and (max-width:740px) {
+.galleryslides{
+    display:flex;
+    max-width:160px;
+    height:auto;
+    margin:auto;
+    flex-direction:row;
+    background-color: #e5e0e8;
+    gap:13px;
+    padding:15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-radius: 10px;
+    left:0;
+    right:0;
+    flex-wrap: nowrap;
+}
 }
 
 #artpage{
@@ -312,7 +351,7 @@ function closeForm() {
 </svg>
 
         </div></a>
-        <a href="wip.html"><div id="page" class="openpage">
+        <a href="art.html"><div id="page" class="openpage">
 
    
 <svg width="146" height="274" viewBox="0 0 146 274" class="navbutton" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -347,27 +386,32 @@ function closeForm() {
 
 </header>
 
+
+
+
 <div class="contentframe">
 
     <container class="contentcard">
   
-  <h1 style="text-align:center; width:auto; max-width: 720px ;flex:100%">Traditional Paintings</h1>
-<p style="margin-top:-10px;text-align: center;">Over the years, I've acquired proficiency in Adobe CC applications, including InDesign, Illustrator, and Photoshop.</p>
+    <h1 style="text-align:center; width:auto; max-width: 720px ;flex:100%">Portrait Paintings</h1>
+    <p style="margin-top:-10px;text-align: center;flex:100%;">*This page is still under construction: 3/24/26*</p>
    
      <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/fareheader.jpg');background-size: cover;"></div>
-            <p><b>Title</b> - 2018</p>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/selfportrait1.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
             </div>
 
-        </section>
+      </section>
             
       <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/fareheader.jpg');background-size: cover;"></div>
-            <p><b>Title</b> - 2018</p>
+            <div onclick="" id="painting2" class="gallerypiccontainer" style="background-image: url('images/Paintings/grandma1.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
             </div>
 
         </section>
@@ -375,40 +419,14 @@ function closeForm() {
            <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/fareheader.jpg');background-size: cover;"></div>
-            <p><b>Title</b> - 2018</p>
+            <div onclick="" id="painting3" class="gallerypiccontainer" style="background-image: url('images/Paintings/portrait1.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
             </div>
 
         </section>
             
-    
-    <section class="gallery">
-            
-           <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/fareheader.jpg');background-size: cover;"></div>
-            <p><b>Title</b> - 2018</p>
-            </div>
 
-        </section>
-            
-      <section class="gallery">
-            
-           <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/fareheader.jpg');background-size: cover;"></div>
-            <p><b>Title</b> - 2018</p>
-            </div>
-
-        </section>
-            
-           <section class="gallery">
-            
-           <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/fareheader.jpg');background-size: cover;"></div>
-            <p><b>Title</b> - 2018</p>
-            </div>
-
-        </section>
-            
     
 
 
@@ -418,67 +436,71 @@ function closeForm() {
 
    
 </div>
+
+
+
 <div class="contentframe">
 
-    <div class="contentcard">
+    <container class="contentcard">
   
-    <h1 style="text-align:center; width:auto; max-width: 720px ;flex:100%">Digital Paintings</h1>
-    <p style="margin-top:-10px;text-align: center;">Over the years, I've acquired proficiency in Adobe CC applications, including InDesign, Illustrator, and Photoshop.</p>
-    <section class="gallery">
+    <h1 style="text-align:center; width:auto; max-width: 720px ;flex:100%">Digital Work</h1>
+    <p style="margin-top:-10px;text-align: center;flex:100%;">*This page is still under construction 3/24/26*</p>
+   
+        <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/fareheader.jpg');background-size: cover;"></div>
-            <p><b>Title</b> - 2018</p>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/mockup1.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
             </div>
 
         </section>
-            
-      <section class="gallery">
+         <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/fareheader.jpg');background-size: cover;"></div>
-            <p><b>Title</b> - 2018</p>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/mockup2.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
             </div>
 
         </section>
-            
-           <section class="gallery">
+        <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/fareheader.jpg');background-size: cover;"></div>
-            <p><b>Title</b> - 2018</p>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/solareclipse1.PNG');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
             </div>
 
         </section>
-            
-    
-    <section class="gallery">
+            <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/fareheader.jpg');background-size: cover;"></div>
-            <p><b>Title</b> - 2018</p>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/concern1.PNG');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
             </div>
 
         </section>
-            
-      <section class="gallery">
+         <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/fareheader.jpg');background-size: cover;"></div>
-            <p><b>Title</b> - 2018</p>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/untitled4.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
             </div>
 
         </section>
-            
-           <section class="gallery">
+        <section class="gallery">
             
            <div>
-            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/fareheader.jpg');background-size: cover;"></div>
-            <p><b>Title</b> - 2018</p>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/milkywaybean.PNG');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
             </div>
 
         </section>
-    
+
 
     </div>
 
@@ -486,6 +508,230 @@ function closeForm() {
 
    
 </div>
+
+
+
+<div class="contentframe">
+
+    <container class="contentcard">
+  
+    <h1 style="text-align:center; width:auto; max-width: 720px ;flex:100%">Paintings</h1>
+    <p style="margin-top:-10px;text-align: center;flex:100%;">*This page is still under construction 3/24/26*</p>
+   
+     <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting4" class="gallerypiccontainer" style="background-image: url('images/Paintings/dusk1.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+      </section>
+            
+      <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting5" class="gallerypiccontainer" style="background-image: url('images/Paintings/unconditional1.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+        </section>
+            
+           <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting6" class="gallerypiccontainer" style="background-image: url('images/Paintings/cloudprincess1.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+        </section>
+            
+    
+      <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/thesunshines1.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+      </section>
+            
+      <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/anhedonia1.JPG');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+        </section>
+            
+           <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/empty1.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+        </section>
+            
+    
+    
+            
+         <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/allseeing1.JPG');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+        </section>
+            
+            
+
+            
+           <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/fae1.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+        </section>
+        
+        <section class="gallery">
+                
+           <div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/lonefae1.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+        </section>
+
+          
+           <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/unicorn1.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+        </section>
+
+             
+            
+            
+         <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/sandman1.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+        </section>
+        
+            
+           <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/thehermit.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+        </section>
+
+        <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/selfreflection1.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+        </section>
+         <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/trapped1.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+        </section>
+        <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/perception.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+        </section>
+        <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/untitled1.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+        </section>
+         <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/untitled2.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+        </section>
+        <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/untitled3.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+        </section>
+
+         <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/mermaidsdrown.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+        </section>
+        <section class="gallery">
+            
+           <div>
+            <div onclick="" id="painting1" class="gallerypiccontainer" style="background-image: url('images/Paintings/favoriteplace.jpg');background-size: cover;"></div>
+            <p><b class="links">Title</b></p>
+            <p style="font-size:small;margin-top:-15px;">2026</p>
+            </div>
+
+        </section>
+
+    </div>
+
+  
+
+   
+</div>
+
+
 
 
 
