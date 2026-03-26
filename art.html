@@ -10,9 +10,8 @@
 
 
 
-
 .hoverimg{
-height: 170px;
+height: auto;
 width: 170px;
 background-color: #555;
 border-radius: 10px;
@@ -21,6 +20,8 @@ box-shadow: 0px 5px 6px #55025523;
 opacity:100%;
 background-size: cover;
 transition: .3s ease;
+background-position:center;
+
 }
 
 .hoverimg:hover,
@@ -36,6 +37,9 @@ border-radius: 10px;
 margin: auto;
 box-shadow: 0px 5px 6px #55025523;
 background-size: cover;
+background-position:center;
+overflow-y: hidden;
+overflow-x: hidden;
 }
 
 
@@ -100,9 +104,9 @@ flex:100%;
 </head>
 <body>
   
-    <link rel="stylesheet" href="mainstyle.css"/>
+<link rel="stylesheet" href="mainstyle.css"/>
 
-    <script>
+<script>
 function openForm() {
     const overlay = document.getElementById("contactmeoverlay");
     overlay.style.display = "block";
@@ -119,7 +123,14 @@ function closeForm() {
         document.body.classList.remove("noscroll");
     }, 200);
 }
-    </script>
+</script>
+
+<div id="expandPic">
+<img id="angelpic" src="images/angel2.JPEG" class="expandedimage" />
+<p id="angelcaption" class="expandedcaption">caption</p>
+<p class="expandedcaption" style="font-size:smaller;">Click anywhere to close.</p>
+</div>
+
 
 
 <div id="contactmeoverlay" onclick="closeForm()">
@@ -412,13 +423,12 @@ function closeForm() {
     <container class="contentcard">
   
     <h1 style="text-align:center; width:auto; max-width: 720px ;flex:100%">Portrait Paintings</h1>
-    <p style="margin-top:-10px;text-align: center;flex:100%;">*This page is still under construction: 3/24/26*</p>
    
      <section class="gallery">
             
            <div>
-            <div onclick="" id="selfportrait1" class="gallerypiccontainer" style="background-image: url('images/Paintings/selfportrait2.gif');background-size: cover;">
-                <div class="hoverimg" style="background-image:url('images/Paintings/selfportrait1.jpg')"></div>
+            <div  class="gallerypiccontainer" style="background-image: url('images/Paintings/selfportrait2.gif');background-size: cover;">
+                <img id="selfportrait1" class="hoverimg" src="images/Paintings/selfportrait1.jpg" />
             </div>
             <p><b class="links">Self Portrait</b></p>
             <p style="font-size:small;margin-top:-15px;">2024</p>
@@ -429,8 +439,8 @@ function closeForm() {
       <section class="gallery">
             
            <div>
-            <div onclick="" id="grandma1" class="gallerypiccontainer" style="background-image: url('images/Paintings/grandma2.jpg');background-size: cover;">
-                <div class="hoverimg" style="background-image:url('images/Paintings/grandma1.jpg')"></div>
+            <div  class="gallerypiccontainer" style="background-image: url('images/Paintings/grandma2.jpg');background-size: cover;background-position:top;">
+                <img id="grandma1" class="hoverimg" src="images/Paintings/grandma1.jpg" style="background-image:url('images/Paintings/grandma1.jpg');background-position:top;"/>
             </div>
             <p><b class="links">Grandma's Portrait</b></p>
             <p style="font-size:small;margin-top:-15px;">2022</p>
@@ -441,8 +451,8 @@ function closeForm() {
            <section class="gallery">
             
            <div>
-            <div onclick="" id="portrait1" class="gallerypiccontainer" style="background-image: url('images/Paintings/portrait2.jpg');background-size: cover;">
-                 <div class="hoverimg" style="background-image:url('images/Paintings/portrait1.jpg')"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/portrait2.jpg');background-size: cover;">
+                 <img  id="portrait1" class="hoverimg" src="images/Paintings/portrait1.jpg" style="background-image:url('images/Paintings/portrait1.jpg')"/>
             </div>
             <p><b class="links">Baby Portrait</b></p>
             <p style="font-size:small;margin-top:-15px;">2020</p>
@@ -468,13 +478,12 @@ function closeForm() {
     <container class="contentcard">
   
     <h1 style="text-align:center; width:auto; max-width: 720px ;flex:100%">Digital Work</h1>
-    <p style="margin-top:-10px;text-align: center;flex:100%;">*This page is still under construction 3/24/26*</p>
    
         <section class="gallery">
             
            <div>
-            <div onclick="" id="mockup1" class="gallerypiccontainer" style="background-image: url('images/Paintings/mockup1.2.gif');background-size: cover;">
-                 <div class="hoverimg" style="background-image:url('images/Paintings/mockup1.jpg')"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/mockup1.2.gif');background-size: cover;">
+               <img  id="mockup1" class="hoverimg" src="images/Paintings/mockup1.jpg" style="position: relative;top: -28px;"/>
             </div>
             <p><b class="links">Desk Mockup</b></p>
             <p style="font-size:small;margin-top:-15px;">2025</p>
@@ -484,8 +493,8 @@ function closeForm() {
          <section class="gallery">
             
            <div>
-            <div onclick="" id="mockup2" class="gallerypiccontainer" style="background-image: url('images/Paintings/mockup2.2.gif');background-size: cover;">
-                 <div class="hoverimg" style="background-image:url('images/Paintings/mockup2.jpg')"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/mockup2.2.gif');background-size: cover;">
+               <img  id="mockup2" class="hoverimg" src="images/Paintings/mockup2.jpg" style="position: relative;top: -42px;" />
             </div>
             <p><b class="links">Table Mockup</b></p>
             <p style="font-size:small;margin-top:-15px;">2025</p>
@@ -495,8 +504,8 @@ function closeForm() {
         <section class="gallery">
             
            <div>
-            <div onclick="" id="solareclipse1" class="gallerypiccontainer" style="background-image: url('images/Paintings/solareclipse2.gif');background-size: cover;">
-                 <div class="hoverimg" style="background-image:url('images/Paintings/solareclipse1.PNG')"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/solareclipse2.gif');background-size: cover;">
+                 <img  id="solareclipse1" class="hoverimg" src="images/Paintings/solareclipse1.PNG" />
             </div>
             <p><b class="links">Solar Eclipse</b></p>
             <p style="font-size:small;margin-top:-15px;">2026</p>
@@ -506,8 +515,8 @@ function closeForm() {
             <section class="gallery">
             
            <div>
-            <div onclick="" id="concern1" class="gallerypiccontainer" style="background-image: url('images/Paintings/concern2.gif');background-size: cover;">
-                 <div class="hoverimg" style="background-image:url('images/Paintings/concern1.PNG')"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/concern2.gif');background-size: cover;">
+                 <img  id="concern1" class="hoverimg" src="images/Paintings/concern1.PNG" style="position: relative;top: -25px;" />
             </div>
             <p><b class="links">Concern</b></p>
             <p style="font-size:small;margin-top:-15px;">2026</p>
@@ -517,8 +526,8 @@ function closeForm() {
          <section class="gallery">
             
            <div>
-            <div onclick="" id="untitled4" class="gallerypiccontainer" style="background-image: url('images/Paintings/untitled4.2.gif');background-size: cover;">
-                 <div class="hoverimg" style="background-image:url('images/Paintings/untitled4.jpg')"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/untitled4.2.gif');background-size: cover;">
+                 <img  id="untitled4" class="hoverimg" src="images/Paintings/untitled4.jpg" />
             </div>
             <p><b class="links">Untitled</b></p>
             <p style="font-size:small;margin-top:-15px;">2026</p>
@@ -528,8 +537,8 @@ function closeForm() {
         <section class="gallery">
             
            <div>
-            <div onclick="" id="milkywaybean" class="gallerypiccontainer" style="background-image: url('images/Paintings/mwblogo2.gif');background-size: cover;">
-                 <div class="hoverimg" style="background-image:url('images/Paintings/milkywaybean.PNG')"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/mwblogo2.gif');background-size: cover;">
+                 <img  id="milkywaybean" class="hoverimg" src="images/Paintings/milkywaybean.PNG" />
             </div>
             <p><b class="links">Milkyway Bean</b></p>
             <p style="font-size:small;margin-top:-15px;">2026</p>
@@ -552,12 +561,13 @@ function closeForm() {
     <container class="contentcard">
   
     <h1 style="text-align:center; width:auto; max-width: 720px ;flex:100%">Traditional Paintings</h1>
-    <p style="margin-top:-10px;text-align: center;flex:100%;">*This page is still under construction 3/24/26*</p>
    
      <section class="gallery">
             
            <div>
-            <div onclick="" id="dusk1" class="gallerypiccontainer" style="background-image: url('images/Paintings/dusk1.jpg');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/dusk2.gif');background-size: cover;">
+                 <img  id="dusk1" class="hoverimg" src="images/Paintings/dusk1.jpg" style="width:240px;"/>
+            </div>
             <p><b class="links">Dusk</b></p>
             <p style="font-size:small;margin-top:-15px;">2025</p>
             </div>
@@ -567,7 +577,9 @@ function closeForm() {
       <section class="gallery">
             
            <div>
-            <div onclick="" id="unconditional1" class="gallerypiccontainer" style="background-image: url('images/Paintings/unconditional1.jpg');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/unconditional2.gif');background-size: cover;">
+                 <img  id="unconditional1" class="hoverimg" src="images/Paintings/unconditional1.jpg" style="position: relative;top: -25px;"/>
+            </div>
             <p><b class="links">Unconditional</b></p>
             <p style="font-size:small;margin-top:-15px;">2024</p>
             </div>
@@ -577,7 +589,9 @@ function closeForm() {
            <section class="gallery">
             
            <div>
-            <div onclick="" id="cloudprincess1" class="gallerypiccontainer" style="background-image: url('images/Paintings/cloudprincess1.jpg');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/cloudprincess2.gif');background-size: cover;">
+                 <img  id="cloudprincess1" class="hoverimg" src="images/Paintings/cloudprincess1.jpg" />
+            </div>
             <p><b class="links">Cloud Princess</b></p>
             <p style="font-size:small;margin-top:-15px;">2023</p>
             </div>
@@ -588,7 +602,9 @@ function closeForm() {
       <section class="gallery">
             
            <div>
-            <div onclick="" id="thesunshines1" class="gallerypiccontainer" style="background-image: url('images/Paintings/thesunshines1.jpg');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/thesunshines2.gif');background-size: cover;">
+                 <img  id="thesunshines1" class="hoverimg" src="images/Paintings/thesunshines1.jpg" style="position: relative;top: -45px;"/>
+            </div>
             <p><b class="links">The Sun Shines</b></p>
             <p style="font-size:small;margin-top:-15px;">2023</p>
             </div>
@@ -598,7 +614,9 @@ function closeForm() {
       <section class="gallery">
             
            <div>
-            <div onclick="" id="anhedonia1" class="gallerypiccontainer" style="background-image: url('images/Paintings/anhedonia1.JPG');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/anhedonia2.gif');background-size: cover;">
+                 <img  id="anhedonia1" class="hoverimg" src="images/Paintings/anhedonia1.JPG" style="position: relative;top: -25px;"/>
+            </div>
             <p><b class="links">Anhedonia</b></p>
             <p style="font-size:small;margin-top:-15px;">2022</p>
             </div>
@@ -608,7 +626,9 @@ function closeForm() {
            <section class="gallery">
             
            <div>
-            <div onclick="" id="empty1" class="gallerypiccontainer" style="background-image: url('images/Paintings/empty1.jpg');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/empty2.gif');background-size: cover;">
+                 <img  id="empty1" class="hoverimg" src="images/Paintings/empty1.jpg" />
+            </div>
             <p><b class="links">Empty</b></p>
             <p style="font-size:small;margin-top:-15px;">2022</p>
             </div>
@@ -621,7 +641,9 @@ function closeForm() {
          <section class="gallery">
             
            <div>
-            <div onclick="" id="allseeing1" class="gallerypiccontainer" style="background-image: url('images/Paintings/allseeing1.JPG');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/allseeing2.jpg');background-size: cover;">
+                 <img  id="allseeing1" class="hoverimg" src="images/Paintings/allseeing1.JPG" style="width:240px;position: relative;right: 41px;"/>
+            </div>
             <p><b class="links">All Seeing</b></p>
             <p style="font-size:small;margin-top:-15px;">2022</p>
             </div>
@@ -634,7 +656,9 @@ function closeForm() {
            <section class="gallery">
             
            <div>
-            <div onclick="" id="fae1" class="gallerypiccontainer" style="background-image: url('images/Paintings/fae1.jpg');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/fae2.gif');background-size: cover;">
+                 <img  id="fae1" class="hoverimg" src="images/Paintings/fae1.jpg" />
+            </div>
             <p><b class="links">Fae</b></p>
             <p style="font-size:small;margin-top:-15px;">2022</p>
             </div>
@@ -644,7 +668,9 @@ function closeForm() {
         <section class="gallery">
                 
            <div>
-            <div onclick="" id="lonefae1" class="gallerypiccontainer" style="background-image: url('images/Paintings/lonefae1.jpg');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/lonefae2.jpg');background-size: cover;">
+                 <img  id="lonefae1" class="hoverimg" src="images/Paintings/lonefae1.jpg" />
+            </div>
             <p><b class="links">Lone Fae</b></p>
             <p style="font-size:small;margin-top:-15px;">2022</p>
             </div>
@@ -655,7 +681,9 @@ function closeForm() {
            <section class="gallery">
             
            <div>
-            <div onclick="" id="unicorn1" class="gallerypiccontainer" style="background-image: url('images/Paintings/unicorn1.jpg');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/unicorn2.gif');background-size: cover;">
+                 <img  id="unicorn1" class="hoverimg" src="images/Paintings/unicorn1.jpg" />
+            </div>
             <p><b class="links">Unicorn</b></p>
             <p style="font-size:small;margin-top:-15px;">2022</p>
             </div>
@@ -668,7 +696,9 @@ function closeForm() {
          <section class="gallery">
             
            <div>
-            <div onclick="" id="sandman1" class="gallerypiccontainer" style="background-image: url('images/Paintings/sandman1.jpg');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/sandman2.jpg');background-size: cover;">
+                 <img  id="sandman1" class="hoverimg" src="images/Paintings/sandman1.jpg" />
+            </div>
             <p><b class="links">Sandman</b></p>
             <p style="font-size:small;margin-top:-15px;">2021</p>
             </div>
@@ -679,7 +709,9 @@ function closeForm() {
            <section class="gallery">
             
            <div>
-            <div onclick="" id="thehermit" class="gallerypiccontainer" style="background-image: url('images/Paintings/thehermit.jpg');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/thehermit.jpg');background-size: cover;">
+                 <img  id="thehermit" class="hoverimg" src="images/Paintings/thehermit.jpg" />
+            </div>
             <p><b class="links">The Hermit</b></p>
             <p style="font-size:small;margin-top:-15px;">2020</p>
             </div>
@@ -689,7 +721,9 @@ function closeForm() {
         <section class="gallery">
             
            <div>
-            <div onclick="" id="selfreflection1" class="gallerypiccontainer" style="background-image: url('images/Paintings/selfreflection1.jpg');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/selfreflection2.gif');background-size: cover;">
+                 <img  id="selfreflection1" class="hoverimg" src="images/Paintings/selfreflection1.jpg" />
+            </div>
             <p><b class="links">Self Reflection</b></p>
             <p style="font-size:small;margin-top:-15px;">2020</p>
             </div>
@@ -698,7 +732,9 @@ function closeForm() {
          <section class="gallery">
             
            <div>
-            <div onclick="" id="trapped1" class="gallerypiccontainer" style="background-image: url('images/Paintings/trapped1.jpg');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/trapped2.gif');background-size: cover;">
+                 <img  id="trapped1" class="hoverimg" src="images/Paintings/trapped1.jpg" />
+            </div>
             <p><b class="links">Trapped</b></p>
             <p style="font-size:small;margin-top:-15px;">2020</p>
             </div>
@@ -707,7 +743,9 @@ function closeForm() {
         <section class="gallery">
             
            <div>
-            <div onclick="" id="perception" class="gallerypiccontainer" style="background-image: url('images/Paintings/perception.jpg');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/perception.jpg');background-size: cover;">
+                 <img  id="perception" class="hoverimg" src="images/Paintings/perception.jpg" />
+            </div>
             <p><b class="links">Perception</b></p>
             <p style="font-size:small;margin-top:-15px;">2020</p>
             </div>
@@ -716,7 +754,9 @@ function closeForm() {
         <section class="gallery">
             
            <div>
-            <div onclick="" id="untitled1" class="gallerypiccontainer" style="background-image: url('images/Paintings/untitled1.jpg');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/Untitled1.2.gif');background-size: cover;">
+                 <img  id="untitled1" class="hoverimg" src="images/Paintings/untitled1.jpg" />
+            </div>
             <p><b class="links">Untitled</b></p>
             <p style="font-size:small;margin-top:-15px;">2022</p>
             </div>
@@ -725,7 +765,9 @@ function closeForm() {
          <section class="gallery">
             
            <div>
-            <div onclick="" id="untitled2" class="gallerypiccontainer" style="background-image: url('images/Paintings/untitled2.jpg');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/Untitled2.2.gif');background-size: cover;">
+                 <img  id="untitled2" class="hoverimg" src="images/Paintings/untitled2.jpg" />
+            </div>
             <p><b class="links">Untitled</b></p>
             <p style="font-size:small;margin-top:-15px;">2022</p>
             </div>
@@ -734,7 +776,9 @@ function closeForm() {
         <section class="gallery">
             
            <div>
-            <div onclick="" id="untitled3" class="gallerypiccontainer" style="background-image: url('images/Paintings/untitled3.jpg');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/untitled3.2.jpg');background-size: cover;">
+                 <img  id="untitled3" class="hoverimg" src="images/Paintings/untitled3.2.jpg" />
+            </div>
             <p><b class="links">Untitled</b></p>
             <p style="font-size:small;margin-top:-15px;">2020</p>
             </div>
@@ -744,7 +788,9 @@ function closeForm() {
          <section class="gallery">
             
            <div>
-            <div onclick="" id="marmaidsdrown" class="gallerypiccontainer" style="background-image: url('images/Paintings/mermaidsdrown.jpg');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/mermaidsdrown.jpg');background-size: cover;">
+                 <img  id="mermaidsdrown" class="hoverimg" src="images/Paintings/mermaidsdrown.jpg" />
+            </div>
             <p><b class="links">Mermaids Drown</b></p>
             <p style="font-size:small;margin-top:-15px;">2020</p>
             </div>
@@ -753,7 +799,9 @@ function closeForm() {
         <section class="gallery">
             
            <div>
-            <div onclick="" id="favoriteplace" class="gallerypiccontainer" style="background-image: url('images/Paintings/favoriteplace.jpg');background-size: cover;"></div>
+            <div class="gallerypiccontainer" style="background-image: url('images/Paintings/favoriteplace.jpg');background-size: cover;">
+                 <img  id="favoriteplace" class="hoverimg" src="images/Paintings/favoriteplace.jpg" style="width:240px;"/>
+            </div>
             <p><b class="links">Favorite Place</b></p>
             <p style="font-size:small;margin-top:-15px;">2020</p>
             </div>
@@ -778,7 +826,262 @@ function closeForm() {
 
   <div id="ovalbg"></div>
 
+<script>
 
+var modal = document.getElementById("expandPic");
+
+
+
+var img = document.getElementById("selfportrait1");
+var img1 = document.getElementById("grandma1");
+var img2 = document.getElementById("portrait1");
+var img3 = document.getElementById("mockup1");
+var img4 = document.getElementById("mockup2");
+var img5 = document.getElementById("solareclipse1");
+var img6 = document.getElementById("concern1");
+var img7 = document.getElementById("untitled4");
+var img8 = document.getElementById("milkywaybean");
+var img9 = document.getElementById("dusk1");
+var img10 = document.getElementById("unconditional1");
+var img11 = document.getElementById("cloudprincess1");
+var img12 = document.getElementById("thesunshines1");
+var img13 = document.getElementById("anhedonia1");
+var img14 = document.getElementById("empty1");
+var img15 = document.getElementById("allseeing1");
+var img16 = document.getElementById("fae1");
+var img17 = document.getElementById("lonefae1");
+var img18 = document.getElementById("unicorn1");
+var img19 = document.getElementById("sandman1");
+var img20 = document.getElementById("thehermit");
+var img21 = document.getElementById("selfreflection1");
+var img22 = document.getElementById("trapped1");
+var img23 = document.getElementById("perception");
+var img24 = document.getElementById("untitled1");
+var img25 = document.getElementById("untitled2");
+var img26 = document.getElementById("untitled3");
+var img27 = document.getElementById("mermaidsdrown");
+var img28 = document.getElementById("favoriteplace");
+
+
+
+
+var expandImage = document.getElementById("angelpic");
+var expandcaption = document.getElementById("angelcaption");
+
+
+
+img.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+
+img1.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img2.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img3.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img4.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img5.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img6.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img7.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img8.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img9.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img10.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img11.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img12.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img13.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img14.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img15.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img16.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img17.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img18.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img19.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img20.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img21.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img22.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img23.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img24.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img25.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img26.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img27.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+img28.onclick = function(){
+  modal.style.display = "block";
+  expandImage.src = this.src;
+  expandcaption.innerHTML = this.alt;
+  document.body.classList.add("noscroll");
+}
+
+
+
+modal.onclick = function() { 
+  modal.style.display = "none";
+   document.body.classList.remove("noscroll");
+}
+
+</script>
   
 </body>
 </html>
