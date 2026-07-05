@@ -1,3 +1,6 @@
+document.querySelectorAll('[role="button"]').forEach(el =>
+  el.addEventListener('keydown', e => { if (e.key === 'Enter') el.click(); })
+);
 
 function openBox() {
     const overlay = document.getElementById("JMoverlay");
