@@ -546,7 +546,32 @@ flex-direction: column;
 }
 
 
+.scrolldots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+}
 
+.scrolldots button {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: #ada09b;
+  opacity: .45;
+  transition: opacity .25s, transform .25s;
+}
+
+.scrolldots button.active {
+  background: #5c4865;
+  opacity: 1;
+  transform: scale(1.35);
+}
+
+.scrolldots.hidden { display: none; }
 
 
 
