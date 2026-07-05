@@ -525,23 +525,25 @@ flex-direction: column;
 
 
 .linkbutton{
-    padding:5px;
+    padding: 5px;
     text-align: center;
-    cursor:pointer;
-    color:#42294c;
-    background-color:#d9d7d9;
+    cursor: pointer;
+    color: #42294c;
+    background-color: #ffffff;
     transition: .3s ease;
-    border-radius:5px;
+    border: solid 2px #5f476b5e;
+    border-radius: 5px;
     text-decoration: none;
     font-family: header;
-    font-size:medium;
+    font-size: medium;
 }
+
 .linkbutton:hover{
-    padding:5px;
-      color: #5e1069;
+    padding:3px;
+    color: #5e1069;
     text-align: center;
     cursor:pointer;
-    background-color:#b2a1b975;
+    background-color:#e8d8ef75;
    
 }
 

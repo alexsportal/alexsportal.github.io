@@ -23,6 +23,8 @@ background-color: #555;
 border-radius: 10px;
 margin: auto;
 box-shadow: 0px 5px 6px #55025523;
+transition:.3s;
+
 }
 
 .gallery{
@@ -30,18 +32,21 @@ box-shadow: 0px 5px 6px #55025523;
     flex:30%;
     text-align: center;
     transition:.3s;
-    opacity: 90%;
-    filter: saturate(80%);
     scroll-snap-align:center;
+    transition:.3s;
 }
 
-.gallery:hover{
-    cursor:pointer;
-    transform:scale(1.01,1.01);
-    opacity:100%;
-    filter: saturate(100%);
-    margin-top:-5px;
+img{
+    transition:.3s;
 }
+
+img:hover,
+.gallerypiccontainer:hover{
+    cursor:pointer;
+    opacity:100%;
+    transform: scale(1.01);
+}
+
 @media screen and (max-width:724px) {
 .gallery{
 flex:100%;
@@ -66,8 +71,19 @@ flex:100%;
     scroll-snap-type: x mandatory;
 }
 
+.galleryslidesux{
+    display: flex;
+    position: relative;
+    gap: 20px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    flex: 100%;
+    scroll-snap-type: x mandatory;
+}
 
-@media screen and (max-width:740px) {
+
+@media screen and (max-width:1100px) {
 .galleryslides{
     display:flex;
     max-width:160px;
@@ -83,6 +99,22 @@ flex:100%;
     left:0;
     right:0;
     flex-wrap: nowrap;
+}
+.galleryslidesux{
+    display:flex;
+    max-width:160px;
+    height:auto;
+    margin:auto;
+    flex-direction:row;
+    background-color: #e5e0e8;
+    gap:13px;
+    padding:15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-radius: 10px;
+    left:0;
+    right:0;
+
 }
 }
 
@@ -600,16 +632,27 @@ function closeForm() {
 
 <div class="contentframe">
 
-<container class="contentcard">
+<container class="contentcard" style=" flex-direction: column; align-items: center;">
   
 <h1 style="text-align:center; width:auto; max-width: 720px ;flex:100%">User Experience</h1>
 <p style="margin-top:-10px;text-align:center;">UX case studies spanning research, wireframing, prototyping, and usability testing. Each project includes a full process page documenting my methodology from problem to solution.</p>
     
-        <div class="galleryslides" id="uxslides">
-        
+        <div class="scrolldots" id="uxdots" aria-label="Scroll position"></div>
+        <div class="galleryslidesux" id="uxslides">
+      <section class="gallery" style="margin-left:15px">
+            <a href="dolli.html" style="text-decoration: none; color:black"> <div>
+           <img  style="max-width: 143px; margin-top: 8px;" src="images/dollimobile.png" class="piccontainer" alt="Dolli app mobile screen"/>
+            <p style="margin-top:8px"><b class="links">Dolli</b></p>
+            <p style="font-size:small;margin-top:-15px;">Blog</p>
+            </div></a>
+            <a class="linkbutton" target="_blank" rel="noopener" style="text-decoration: none;width:100%;" href="https://www.figma.com/proto/TljZGiUfTqPP7d7XkWqEzk/MobileDolls?node-id=2043-1267&t=6CUYs28Y2XMkpWXT-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3104%3A8499&show-proto-sidebar=1">
+              🔗‍️ Prototype
+            </a> 
+        </section>
+
       <section class="gallery">
             <a href="processpageFARE.html" style="text-decoration: none; color:black"> <div>
-           <img  style="max-width:170px;" src="images/faremobile.png" class="piccontainer" alt="FARE app mobile screens"/>
+           <img  style="max-width:170px;" src="images/faremobile.png" class="piccontainer" alt="FARE app mobile screen"/>
             <p style="margin-top:-10px"><b class="links">FARE</b></p>
             <p style="font-size:small;margin-top:-15px;">Process Page</p>
             </div></a>
@@ -620,7 +663,7 @@ function closeForm() {
             
        <section class="gallery">
             <a href="processpageIRIS.html" style="text-decoration: none;color:black;"> <div>
-             <img  style="max-width:170px;" src="images/irismobile.png" class="piccontainer" alt="IRIS app mobile screens"/>
+             <img  style="max-width:170px;" src="images/irismobile.png" class="piccontainer" alt="IRIS app mobile screen"/>
             <p style="margin-top:-10px"><b class="links">IRIS</b> </p>
             <p style="font-size:small;margin-top:-15px;">Process Page</p>
             </div></a>
@@ -631,7 +674,7 @@ function closeForm() {
             
          <section class="gallery" style="margin-right:8px;">
            <a href="processpage8TIV.html" style="text-decoration: none;color:black;"> <div>
-            <img  style="max-width:158px;margin-top:5px;" src="images/8tivmobile.png" class="piccontainer" alt="8TIV social app mobile screens"/>
+            <img  style="max-width:158px;margin-top:5px;" src="images/8tivmobile.png" class="piccontainer" alt="8TIV social app mobile screen"/>
             <p style="margin-top:-6px;"><b class="links">8TIV</b></p>
             <p style="font-size:small;margin-top:-15px;">Process Page</p>
           
@@ -642,7 +685,7 @@ function closeForm() {
              
         </section>
             </div>
-        <div class="scrolldots" id="uxdots" aria-label="Scroll position"></div>
+        
 
 
     </container>
@@ -653,12 +696,12 @@ function closeForm() {
 </div>
 <div class="contentframe">
 
-    <container class="contentcard">
+    <container class="contentcard" style="flex-direction: column; align-items: center;">
   
     <h1 style="text-align:center; width:auto; max-width: 720px ;flex:100%">Interface & Graphic Design</h1>
     <p style="margin-top:-10px;text-align: center;">UI design and graphic work: layouts, branding, and visual design.</p>
 
-
+    <div class="scrolldots" id="gfxdots" aria-label="Scroll position"></div>
     <div class="galleryslides" id="gfxslides">
     <section class="gallery">
             
@@ -721,7 +764,7 @@ function closeForm() {
 
         </section>
     </div>
-    <div class="scrolldots" id="gfxdots" aria-label="Scroll position"></div>
+    
     </container>
 
   
